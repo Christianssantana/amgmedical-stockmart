@@ -28,7 +28,6 @@
         },
         "description": {
           "type": "description",
-          "disabled": true,
           "settings": {
             "description": "Investor focus research & development value proposition graphical user interface investor. Startup business plan user experience."
           }
@@ -36,15 +35,12 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
-            "show_quantity": true,
-            "show_gift_card_recipient": false
+            "show_dynamic_checkout": true
           }
         },
         "pickup_availability": {
@@ -55,13 +51,10 @@
         "advantage_1": {
           "type": "advantage",
           "settings": {
-            "color_scheme": "black",
             "heading": "Advantage heading",
             "text": "Advantage description",
             "toggle_type": "read_more",
-            "popup_heading": "Popup Title",
-            "popup_text": "Popup description",
-            "page": ""
+            "popup_text": "Popup description"
           }
         },
         "advantage_2": {
@@ -71,9 +64,7 @@
             "heading": "Advantage heading",
             "text": "Advantage description",
             "toggle_type": "popup",
-            "popup_heading": "Popup Title",
-            "popup_text": "Popup description",
-            "page": ""
+            "popup_text": "Popup description"
           }
         },
         "advantage_3": {
@@ -83,9 +74,7 @@
             "heading": "Advantage heading",
             "text": "Advantage description",
             "toggle_type": "read_more",
-            "popup_heading": "Popup Title",
-            "popup_text": "Popup description",
-            "page": ""
+            "popup_text": "Popup description"
           }
         },
         "note": {
@@ -97,20 +86,15 @@
         },
         "promo_banner": {
           "type": "promo_banner",
-          "disabled": true,
           "settings": {
-            "background_color": "#1e48b5",
             "text": "Text for promo banner",
-            "text_color": "#ffffff",
             "link_text": "Link for promo banner",
-            "link_url": "",
-            "link_color": "#ffd875"
+            "link_url": ""
           }
         },
         "related_product": {
           "type": "related_product",
           "settings": {
-            "description": "2 Days Delivery"
           }
         },
         "about_1": {
@@ -127,19 +111,14 @@
         },
         "floated_form": {
           "type": "floated_form",
-          "disabled": true,
           "settings": {
           }
         },
         "banner": {
           "type": "banner",
-          "disabled": true,
           "settings": {
-            "background_color": "#1e48b5",
             "heading": "Some heading",
-            "heading_color": "#ffd875",
-            "text": "Some text",
-            "text_color": "#ffffff"
+            "text": "Some text"
           }
         }
       },
@@ -165,58 +144,38 @@
       ],
       "settings": {
         "desktop_alignment": "left",
-        "image_fit": "contain",
-        "enable_autoheight": false,
-        "heading_description": "",
-        "heading_size_description": "h1",
-        "padding_top": "no-indent",
-        "padding_bottom": "no-indent"
+        "image_fit": "cover"
       }
     },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
         "color_scheme": "background-1",
-        "heading": "Check Out These Related Products",
         "link": "Explore",
         "products_limit": 6,
-        "columns_mobile": "1",
-        "image_ratio": "landscape",
+        "image_ratio": "square",
         "image_fit": "cover",
         "show_secondary_image": true,
         "show_vendor": true,
-        "show_desc": false,
-        "show_sku": false,
-        "padding_top": "m",
-        "padding_bottom": "m"
+        "show_desc": false
       }
     },
     "featured-blog": {
       "type": "featured-blog",
       "settings": {
         "color_scheme": "background-2",
-        "color_scheme_card": "background-2",
-        "subheading": "",
-        "heading": "Latest Articles",
         "heading_size": "h2",
         "post_layout": "column-icon",
         "image_width": "medium",
         "image_fit": "contain",
-        "icon_background": "background-2",
-        "blog": "",
         "post_limit": 6,
-        "post_limit_mobile": 3,
         "show_image": true,
         "show_tags": false,
         "show_date": false,
         "show_author": false,
         "show_excerpt": false,
         "show_view_all": true,
-        "show_view_all_mobile": true,
-        "button_label": "Button label",
-        "button_style": "secondary",
-        "padding_top": "m",
-        "padding_bottom": "m"
+        "button_style": "secondary"
       }
     }
   },
