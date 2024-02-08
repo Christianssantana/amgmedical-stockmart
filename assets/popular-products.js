@@ -13,10 +13,13 @@
 			".popular-products__wrapper",
 		).dataset.limit;
 		const filters = sectionPopularProducts.querySelectorAll(".filters__item");
+		const principals = document.getElementById("principals-header");
+
 
 		filters.forEach((item) => {
 			item.addEventListener("click", (event) => {
 				const filterTarget = item.dataset.filterTarget;
+				console.log(filterTarget);
 
 				filters.forEach((element) => {
 					element.classList.remove("filters__item_active");
@@ -49,6 +52,12 @@
 						}
 					}
 				});
+
+				if (filterTarget == "leadership") {
+					principals.style.display = "block";
+				} else {
+					principals.style.display = "none";
+				}
 			});
 		});
 	};

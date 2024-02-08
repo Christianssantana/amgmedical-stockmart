@@ -58,46 +58,69 @@
       </div>
     {%- endif -%}
     <div class="image-banner__wrapper {% if section.settings.text_align != 'left' %}image-banner__column--center{% endif %} {% if section.settings.full_width %}container{% else %}{% endif %}">
-      {%- if section.settings.subheading != blank -%}
-        <div class="image-banner__subheading subtitle">
-          {{ section.settings.subheading }}
-        </div>
-      {%- endif -%}
-      <div class="image-banner__column {% if section.settings.text_order != 'row' %}image-banner__column--column{% endif %}">
-        {%- if section.settings.heading != blank -%}
-          <h2 class="image-banner__heading title--section title--decorate title--section-mt-none {% if section.settings.heading_size == 'medium' %}h2{% else %}h1{% endif %}">
-            {{ section.settings.heading }}
-          </h2>
-        {%- endif -%}
-
-        {%- if section.settings.text_information != blank or section.settings.show_view_all -%}
-          <div class="image-banner__information">
-            {%- if section.settings.text_information != blank -%}
-              <p class="image-banner__text">
-                {{ section.settings.text_information | escape }}
-              </p>
-            {%- endif -%}
-
-            {%- if section.settings.show_view_all -%}
-              <a
-                {% if section.settings.button_link != blank %}
-                  href="{{ section.settings.button_link }}"
-                {% endif %}
-                class="button image-banner__button button--arrow button--{{ section.settings.button_style }}"
-                {% if section.settings.button_link == blank %}
-                  aria-disabled="true"
-                {% endif %}
-              >
-                <span>
-                  {{- section.settings.button_label | escape -}}
-                </span>
-                <span>
-                  {%- render 'icon-button-arrow' -%}
-                </span>
-              </a>
-            {%- endif -%}
+      <div class="image-banner__content">
+        {%- if section.settings.banner_image != blank -%}
+          <div class="image-banner__image">
+            <img
+              srcset="
+                {%- if section.settings.banner_image.width >= 375 -%}{{ section.settings.banner_image | image_url: width: '375x' }} 375w,{%- endif -%}
+                {%- if section.settings.banner_image.width >= 750 -%}{{ section.settings.banner_image | image_url: width: '750x' }} 750w,{%- endif -%}
+                {%- if section.settings.banner_image.width >= 1296 -%}{{ section.settings.banner_image | image_url: width: '1296x' }} 1296w,{%- endif -%}
+                {%- if section.settings.banner_image.width >= 1500 -%}{{ section.settings.banner_image | image_url: width: '1500x' }} 1500w,{%- endif -%}
+                {%- if section.settings.banner_image.width >= 1780 -%}{{ section.settings.banner_image | image_url: width: '1780x' }} 1780w,{%- endif -%}
+                {%- if section.settings.banner_image.width >= 2000 -%}{{ section.settings.banner_image | image_url: width: '2000x' }} 2000w,{%- endif -%}
+                {%- if section.settings.banner_image.width >= 2800 -%}{{ section.settings.banner_image | image_url: width: '2800x' }} 2800w{%- endif -%}
+              "
+              src="{{ section.settings.banner_image | image_url: width: '450x' }}"
+              loading="lazy"
+              alt="{{ section.settings.banner_image.alt | escape }}"
+              width="{{ section.settings.banner_image.width }}"
+              height="{{ section.settings.banner_image.width | divided_by: section.settings.banner_image.aspect_ratio }}"
+              style="object-position: {{ section.settings.banner_image.presentation.focal_point }}"
+            >
           </div>
         {%- endif -%}
+        {%- if section.settings.subheading != blank -%}
+          <div class="image-banner__subheading subtitle">
+            {{ section.settings.subheading }}
+          </div>
+        {%- endif -%}
+        <div class="image-banner__column {% if section.settings.text_order != 'row' %}image-banner__column--column{% endif %}">
+          {%- if section.settings.heading != blank -%}
+            <h2 class="image-banner__heading title--section title--decorate title--section-mt-none {% if section.settings.heading_size == 'medium' %}h2{% else %}h1{% endif %}">
+              {{ section.settings.heading }}
+            </h2>
+          {%- endif -%}
+
+          {%- if section.settings.text_information != blank or section.settings.show_view_all -%}
+            <div class="image-banner__information">
+              {%- if section.settings.text_information != blank -%}
+                <p class="image-banner__text">
+                  {{ section.settings.text_information | escape }}
+                </p>
+              {%- endif -%}
+
+              {%- if section.settings.show_view_all -%}
+                <a
+                  {% if section.settings.button_link != blank %}
+                    href="{{ section.settings.button_link }}"
+                  {% endif %}
+                  class="button image-banner__button button--arrow button--{{ section.settings.button_style }}"
+                  {% if section.settings.button_link == blank %}
+                    aria-disabled="true"
+                  {% endif %}
+                >
+                  <span>
+                    {{- section.settings.button_label | escape -}}
+                  </span>
+                  <span>
+                    {%- render 'icon-button-arrow' -%}
+                  </span>
+                </a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
       </div>
     </div>
   </div>
@@ -141,6 +164,11 @@
       ],
       "default": "background-1",
       "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
     },
     {
       "type": "text",

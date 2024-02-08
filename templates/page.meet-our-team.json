@@ -1,0 +1,467 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "rich_text_7gbN83": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4e4cWd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>{{ page.title }}<\/p>",
+            "heading_size": "large"
+          }
+        },
+        "text_H88x8T": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Everyone who works at AMG Medical shares the values and culture of our company.<\/p><p>We work hard and we strive to be the #1 partner you can rely on in healthcare and infection control.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4e4cWd",
+        "text_H88x8T"
+      ],
+      "custom_css": [
+        ".rich-text {max-width: 1440px; margin-inline: auto; padding-inline: 20px;}",
+        ".rich-text__blocks {margin-inline-start: 0; text-align: left; width: 100%; max-width: 730px;}",
+        ".rich-text__text p {color: #5d226c; font-size: 16px; margin-block-end: 1.5rem;}",
+        "@media screen and (min-width: 750px) {.rich-text__text p {font-size: 18px; }}",
+        "@media screen and (min-width: 1200px) {.rich-text__text p {font-size: 20px; } .rich-text {padding-inline: 50px; }}",
+        "@media screen and (min-width: 1600px) {.rich-text__text p {font-size: 24px; }}"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "team_member_JAWBt9": {
+      "type": "team-member",
+      "blocks": {
+        "leadership_Vap78y": {
+          "type": "leadership",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_2069883b-25c9-4afc-820e-f0531012af62.jpg",
+            "member_name": "Philip del Buey",
+            "member_position": "President",
+            "member_url": "https:\/\/amgmedical.com\/philip-del-buey"
+          }
+        },
+        "leadership_cUGiAU": {
+          "type": "leadership",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_1d672479-a81d-4c0c-a366-0bbab7ddf4b0.jpg",
+            "member_name": "Danny Meyers",
+            "member_position": "Vice President Marketing",
+            "member_url": "https:\/\/amgmedical.com\/danny-meyers"
+          }
+        },
+        "leadership_9bBYnk": {
+          "type": "leadership",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_62051d67-c112-443e-8399-016aa44b177f.jpg",
+            "member_name": "Jonathan Dankner",
+            "member_position": "Vice President Operations",
+            "member_url": "https:\/\/amgmedical.com\/jonathan-dankner"
+          }
+        },
+        "leadership_dhnRJP": {
+          "type": "leadership",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_38b19888-a6dd-4f86-bfef-0661f16919ed.jpg",
+            "member_name": "Roney Benjamin",
+            "member_position": "Vice President Sales",
+            "member_url": "https:\/\/amgmedical.com\/roney-benjamin"
+          }
+        },
+        "leadership_fCfQK4": {
+          "type": "leadership",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_9849b64d-070a-4080-bd3c-51a7282c50a1.jpg",
+            "member_name": "Janick Coulombe",
+            "member_position": "Vice-President Finance and Administration",
+            "member_url": "https:\/\/amgmedical.com\/janick-coulombe"
+          }
+        },
+        "leadership_yNUxYz": {
+          "type": "leadership",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_0ee00dca-6b31-4def-b97e-bf51682bbcfc.jpg",
+            "member_name": "Rudy Abitbol",
+            "member_position": "Vice President Digital and E-Commerce",
+            "member_url": "https:\/\/amgmedical.com\/rudy-abitbol"
+          }
+        },
+        "administration_CGFWUL": {
+          "type": "administration",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_26e16b72-bcfd-4edf-a335-cead073c9978.jpg",
+            "member_name": "Stephen Elias",
+            "member_position": "Network Administrator",
+            "member_url": ""
+          }
+        },
+        "administration_FQezYX": {
+          "type": "administration",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_b96f9bbf-da62-4809-85c2-34c2c4270c6c.jpg",
+            "member_name": "Joel Johnson",
+            "member_position": "Contracts and Pricing Manager",
+            "member_url": ""
+          }
+        },
+        "administration_UVPBkr": {
+          "type": "administration",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_7771860c-b4e6-4efd-a9af-0ef1beb2eba9.jpg",
+            "member_name": "Steve Trosok",
+            "member_position": "Regulatory Affairs Associate",
+            "member_url": ""
+          }
+        },
+        "administration_tCpTUj": {
+          "type": "administration",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_4e400af6-68aa-41b1-b609-3dbaffa7281a.jpg",
+            "member_name": "Chantal Rheault",
+            "member_position": "MIS Manager",
+            "member_url": ""
+          }
+        },
+        "administration_yBLENe": {
+          "type": "administration",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_4e400af6-68aa-41b1-b609-3dbaffa7281a.jpg",
+            "member_name": "Trusha Patel",
+            "member_position": "HR Generalist",
+            "member_url": ""
+          }
+        },
+        "customer_service_et9qXr": {
+          "type": "customer_service",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_c8ad8fad-e4f5-485f-8d6f-4de482d3cc96.jpg",
+            "member_name": "Paola Gatto",
+            "member_position": "Customer Service Manager",
+            "member_url": ""
+          }
+        },
+        "customer_service_TDLgnX": {
+          "type": "customer_service",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_751c1b90-fb56-4c22-abca-cc31632dd935.jpg",
+            "member_name": "Nicole Imbeault",
+            "member_position": "Customer Service Representative",
+            "member_url": ""
+          }
+        },
+        "customer_service_WexqdD": {
+          "type": "customer_service",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_0db34a64-575b-49d0-a4af-da8ffca89dd4.jpg",
+            "member_name": "Sandrine Nshuti",
+            "member_position": "Customer Service Representative",
+            "member_url": ""
+          }
+        },
+        "customer_service_PWpj3i": {
+          "type": "customer_service",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_4e400af6-68aa-41b1-b609-3dbaffa7281a.jpg",
+            "member_name": "Diana Casquilho",
+            "member_position": "Customer Service Representative",
+            "member_url": ""
+          }
+        },
+        "finance_VNz3YT": {
+          "type": "finance",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_4e400af6-68aa-41b1-b609-3dbaffa7281a.jpg",
+            "member_name": "Dolly Bassil",
+            "member_position": "Finance Manager",
+            "member_url": ""
+          }
+        },
+        "finance_rFNVgL": {
+          "type": "finance",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_aba14ad6-1f8a-48d5-8356-54fca91d2438.jpg",
+            "member_name": "Rawaa Al-Bayati",
+            "member_position": "Accounting Clerk \/ Collections",
+            "member_url": ""
+          }
+        },
+        "finance_Pa3wwf": {
+          "type": "finance",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_260200b1-983b-4cea-ac16-deb91af3400e.jpg",
+            "member_name": "Rania Azizi",
+            "member_position": "Accounting Clerk",
+            "member_url": ""
+          }
+        },
+        "marketing_tUxnyc": {
+          "type": "marketing",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_3be00c63-25b3-43df-9ba0-99c9361e889c.jpg",
+            "member_name": "Melissa Balinsky",
+            "member_position": "Category Manager",
+            "member_url": ""
+          }
+        },
+        "marketing_e3T4Vq": {
+          "type": "marketing",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_589dfb85-8e09-4993-bf18-9562136ba281.jpg",
+            "member_name": "Vanessa Horvath",
+            "member_position": "Category Manager",
+            "member_url": ""
+          }
+        },
+        "marketing_Mh4TVG": {
+          "type": "marketing",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_4e400af6-68aa-41b1-b609-3dbaffa7281a.jpg",
+            "member_name": "Mireille Grondin",
+            "member_position": "Creative Team Coordinator",
+            "member_url": ""
+          }
+        },
+        "marketing_ema3nT": {
+          "type": "marketing",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_9603e4ad-3982-4103-8148-7379079e6733.jpg",
+            "member_name": "Jean-Francois Perron",
+            "member_position": "Graphic Designer",
+            "member_url": ""
+          }
+        },
+        "operations_3RTQgF": {
+          "type": "operations",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_6b4b66d3-a0aa-4511-8339-50ee5ba9e2bf.jpg",
+            "member_name": "Cindy Rowell",
+            "member_position": "Procurement & Quality Manager",
+            "member_url": ""
+          }
+        },
+        "operations_qd9Hbk": {
+          "type": "operations",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_c0f13566-69a7-4167-a5cf-5959a03dfa8e.jpg",
+            "member_name": "Pocholo Del Rosario",
+            "member_position": "Replenishment Analyst",
+            "member_url": ""
+          }
+        },
+        "operations_LC37rH": {
+          "type": "operations",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_31da5363-0c85-48e9-8cb5-cfbc864b0d64.jpg",
+            "member_name": "Yang Liu",
+            "member_position": "Sourcing Manager",
+            "member_url": ""
+          }
+        },
+        "operations_3jCecU": {
+          "type": "operations",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_47857b25-6ad1-4e9f-92b8-8b44621305bd.jpg",
+            "member_name": "Patrick Harvey",
+            "member_position": "Distribution Center Manager",
+            "member_url": ""
+          }
+        },
+        "operations_TqBTft": {
+          "type": "operations",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_2bbc14e8-873b-4575-9f8a-c0ad37390e53.jpg",
+            "member_name": "Tim Biffin",
+            "member_position": "Shipping Supervisor",
+            "member_url": ""
+          }
+        },
+        "operations_V6PFkz": {
+          "type": "operations",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_6326e5a3-6cfc-4602-b960-05fb17b3fc26.jpg",
+            "member_name": "Chris Leger",
+            "member_position": "Inventory Supervisor",
+            "member_url": ""
+          }
+        },
+        "operations_Nc3FNq": {
+          "type": "operations",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_9603e4ad-3982-4103-8148-7379079e6733.jpg",
+            "member_name": "Matthew Waugh",
+            "member_position": "Quality Associate",
+            "member_url": ""
+          }
+        },
+        "sales_CdL6x4": {
+          "type": "sales",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_ba0878e6-be68-4529-ac77-6ea1f6cdedff.jpg",
+            "member_name": "Éric Parent",
+            "member_position": "Director of National Retail Sales",
+            "member_url": ""
+          }
+        },
+        "sales_fE8XQD": {
+          "type": "sales",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_62c00d6f-0806-47e6-ab16-47eaec91b3aa.jpg",
+            "member_name": "Fred Friedberg",
+            "member_position": "Territory Manager",
+            "member_url": ""
+          }
+        },
+        "sales_KTeq3L": {
+          "type": "sales",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_20795efd-bc68-4b83-94ee-85fcd91b70de.jpg",
+            "member_name": "Joanne Oliver",
+            "member_position": "Territory Manager",
+            "member_url": ""
+          }
+        },
+        "sales_6dfKDM": {
+          "type": "sales",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_e7ee3447-624b-46bf-9752-14dd6331bd31.jpg",
+            "member_name": "Jef Jurgeneit",
+            "member_position": "Territory Manager",
+            "member_url": ""
+          }
+        },
+        "sales_WwCV4m": {
+          "type": "sales",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_4ed9f94b-075f-4c91-9d60-0401caef1304.jpg",
+            "member_name": "Denise Campbell",
+            "member_position": "Territory Manager",
+            "member_url": ""
+          }
+        },
+        "sales_eU8q44": {
+          "type": "sales",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_638733d5-17c5-431c-8f95-eedb6e234589.jpg",
+            "member_name": "Viviane Lee-Laflèche",
+            "member_position": "Sales Coordinator",
+            "member_url": ""
+          }
+        },
+        "principals_p8wUCd": {
+          "type": "principals",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_ea1c9edd-8dc4-4f94-9f01-93219ab0de6f.jpg",
+            "member_name": "Allan Goldenberg"
+          }
+        },
+        "principals_iReJDj": {
+          "type": "principals",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_2547a069-2922-40bf-a446-58799b13e919.jpg",
+            "member_name": "Ben Topor"
+          }
+        },
+        "principals_qHbCUX": {
+          "type": "principals",
+          "settings": {
+            "member_image": "shopify:\/\/shop_images\/unnamed_27131983-cbe1-43f2-966e-33e2ea205c25.jpg",
+            "member_name": "Robert Oringer"
+          }
+        }
+      },
+      "block_order": [
+        "leadership_Vap78y",
+        "leadership_cUGiAU",
+        "leadership_9bBYnk",
+        "leadership_dhnRJP",
+        "leadership_fCfQK4",
+        "leadership_yNUxYz",
+        "administration_CGFWUL",
+        "administration_FQezYX",
+        "administration_UVPBkr",
+        "administration_tCpTUj",
+        "administration_yBLENe",
+        "customer_service_et9qXr",
+        "customer_service_TDLgnX",
+        "customer_service_WexqdD",
+        "customer_service_PWpj3i",
+        "finance_VNz3YT",
+        "finance_rFNVgL",
+        "finance_Pa3wwf",
+        "marketing_tUxnyc",
+        "marketing_e3T4Vq",
+        "marketing_Mh4TVG",
+        "marketing_ema3nT",
+        "operations_3RTQgF",
+        "operations_qd9Hbk",
+        "operations_LC37rH",
+        "operations_3jCecU",
+        "operations_TqBTft",
+        "operations_V6PFkz",
+        "operations_Nc3FNq",
+        "sales_CdL6x4",
+        "sales_fE8XQD",
+        "sales_KTeq3L",
+        "sales_6dfKDM",
+        "sales_WwCV4m",
+        "sales_eU8q44",
+        "principals_p8wUCd",
+        "principals_iReJDj",
+        "principals_qHbCUX"
+      ],
+      "settings": {
+        "heading": ""
+      }
+    },
+    "image_banner_TL8kzm": {
+      "type": "image-banner",
+      "custom_css": [
+        ".banner--adapt {height: 50rem;}",
+        ".image-banner__wrapper {width: 100%; max-width: 1440px;}",
+        ".image-banner__content {max-width: 600px; background-color: #5d226c; color: #ede9ed; padding: 40px 20px;}",
+        ".image-banner__text {font-family: var(--font-heading-family); font-size: 16.8px; line-height: 1.7;}",
+        "@media screen and (min-width: 1200px) {.image-banner__content {padding: 70px 50px; }}"
+      ],
+      "settings": {
+        "full_width": true,
+        "color_scheme": "background-1",
+        "banner_image": "shopify:\/\/shop_images\/white-logo.png",
+        "subheading": "",
+        "heading": "",
+        "heading_size": "medium",
+        "text_information": "We are providing healthcare solutions that allow people to live and feel better by way of brands that make caring for their health easier, safer, and less stressful.",
+        "text_align": "left",
+        "show_view_all": false,
+        "button_label": "Shop now",
+        "button_style": "primary",
+        "button_link": "",
+        "image": "shopify:\/\/shop_images\/banner-bottom-bg.webp",
+        "image_ratio": "adapt",
+        "opacity_overlay": 0,
+        "margin_top": "l",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_7gbN83",
+    "team_member_JAWBt9",
+    "image_banner_TL8kzm"
+  ]
+}
