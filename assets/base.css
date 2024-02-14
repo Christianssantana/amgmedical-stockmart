@@ -3612,7 +3612,7 @@ body.body--hidden {
 @media screen and (min-width: 1200px) {
   .shopify-section-header-sticky .header__bottom {
     box-shadow: 0px 5px 10px rgba(1, 1, 1, 0.05);
-    transform: translateY(-102%);
+    /* transform: translateY(-102%); */
     transition: all var(--duration-default);
   }
 }

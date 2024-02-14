@@ -44,6 +44,7 @@
     "type_footer_menu_font": "dm_sans_n7",
     "type_popups_heading_font": "dm_sans_n7",
     "type_popups_text_font": "dm_sans_n4",
+    "breadcrumbs_top_padding": 0,
     "badge_sale_background_color": "#2d8653",
     "favicon": "shopify:\/\/shop_images\/AMGMedical-Favicon.webp",
     "colors_subtitle_dot": "#2d8653",

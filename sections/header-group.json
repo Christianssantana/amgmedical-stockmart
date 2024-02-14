@@ -4,6 +4,7 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
+      "disabled": true,
       "settings": {
         "height": 40,
         "height_mobile": 40,
@@ -16,6 +17,7 @@
       "blocks": {
         "dropdown": {
           "type": "dropdown",
+          "disabled": true,
           "settings": {
             "shop_button_label": "Shop Now",
             "shop_button_menu": "main-menu",
@@ -43,24 +45,57 @@
             "text_2": "",
             "text_accent_2": ""
           }
+        },
+        "mega_menu_DhR8Mx": {
+          "type": "mega_menu",
+          "settings": {
+            "mega_menu_trigger": "Our Brands",
+            "heading": "",
+            "show_mega_menu_1": true,
+            "color_scheme_1": "dark",
+            "heading_1": "",
+            "description_1": "",
+            "image_1": "shopify:\/\/shop_images\/brand-bav.webp",
+            "overlay_opacity_1": 0,
+            "enable_mobile_overlay_1": false,
+            "show_button_1": false,
+            "button_link_1": "",
+            "button_label_1": "Button label",
+            "button_style_1": "primary",
+            "text_1": "",
+            "text_accent_1": "",
+            "show_mega_menu_2": false,
+            "color_scheme_2": "dark",
+            "heading_2": "",
+            "description_2": "",
+            "overlay_opacity_2": 0,
+            "enable_mobile_overlay_2": false,
+            "show_button_2": false,
+            "button_link_2": "",
+            "button_label_2": "Button label",
+            "button_style_2": "primary",
+            "text_2": "",
+            "text_accent_2": ""
+          }
         }
       },
       "block_order": [
-        "dropdown"
+        "dropdown",
+        "mega_menu_DhR8Mx"
       ],
       "settings": {
-        "header_type": "bottom-menu",
+        "header_type": "top-menu",
         "color_scheme": "background-1",
         "logo": "shopify:\/\/shop_images\/amgmedical-logo_1646247493__60270.original.png",
         "logo_width": 150,
         "menu": "main-menu",
-        "small_menu": "main-menu",
+        "small_menu": "",
         "enable_country_selector": true,
         "enable_language_selector": true,
-        "sticky_header_type": "on-scroll-up",
+        "sticky_header_type": "always",
         "enable_contact_block": true,
-        "contact_text": "Description",
-        "contact_text_accent": "<p>Contact info<\/p>",
+        "contact_text": "",
+        "contact_text_accent": "<p><a href=\"\/\" title=\"\/\">Help<\/a><\/p>",
         "enable_search": true,
         "enable_search_modal": false,
         "show_collection_card": false,
