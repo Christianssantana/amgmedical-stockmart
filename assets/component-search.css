@@ -307,7 +307,7 @@ details[open] .search-modal__item .search-modal__close-button {
 }
 
 .search__input.field__input {
-  min-width: 25rem;
+  min-width: 20rem;
   min-height: 4rem;
   border: 0.2rem solid rgb(var(--color-border-input));
   border-radius: 0.4rem;

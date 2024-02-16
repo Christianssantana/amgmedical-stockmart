@@ -89,6 +89,7 @@
         "logo": "shopify:\/\/shop_images\/amgmedical-logo_1646247493__60270.original.png",
         "logo_width": 150,
         "menu": "main-menu",
+        "menu_mobile": "mobile-drawer-menu",
         "small_menu": "",
         "enable_country_selector": true,
         "enable_language_selector": true,

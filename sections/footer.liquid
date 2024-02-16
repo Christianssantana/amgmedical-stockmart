@@ -1,3 +1,187 @@
+<style>
+ a.list-menu__item.list-menu__item--link {
+  text-decoration: none;
+  color: #5d226c;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+a.list-menu__item.list-menu__item--link:hover {
+  font-weight: 700;
+  color: #5d226c;
+}
+
+h2.h5.footer-block__heading {
+  color: #5d226c;
+  text-transform: inherit;
+  font-size: 14px;
+  letter-spacing: .03em;
+  font-family: "TT Norms", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.footer-block.footer-block--menu {
+  line-height: 30px;
+}
+
+.footer__column.footer__column--payment {
+  display: none;
+}
+
+.footer-image-container {
+  display: flex;
+  align-items: center;
+}
+
+img.footer-img-1 {
+  width: 100%;
+  height: auto;
+  max-width: 80px;
+  min-height: 14px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+img.footer-img-2 {
+  width: 100px;
+  height: auto;
+  max-width: 80px;
+  min-height: 36px;
+}
+
+.footer-image-1 {
+  display: flex;
+}
+
+.footer-image-2 {
+  display: flex;
+}
+
+.footer-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+p.powered-by {
+  color: #5d226c;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer__content-middle-main {
+  border-bottom: .2rem solid rgb(var(--color-border));
+}
+
+.border-container {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-top: 0.2rem solid rgb(var(--color-border));
+  border-bottom: 0.2rem solid rgb(var(--color-border));
+}
+
+.social-links svg {
+  width: 16px;
+  height: 16px;
+}
+
+a.link-items {
+  text-decoration: none;
+  color: #5d226c;
+  font-size: 14px;
+}
+
+.footer-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px 20px 0px;
+}
+
+.social-platforms-svg {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-content-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+a.link-items:hover {
+  font-weight: 700;
+  color: #5d226c;
+}
+
+@media screen and (max-width: 850px) {
+
+  footer.footer.color-background-2 {
+    padding: 0 50px;
+  }
+
+  .footer-content-links {
+    flex-wrap: wrap;
+    flex: 1;
+  }
+
+  .footer-flex-container {
+    display: block;
+  }
+
+  .footer-image-container {
+    padding-bottom: 25px;
+    border-bottom: 0.2rem solid rgb(var(--color-border));
+    justify-content: center;
+  }
+
+  p.powered-by {
+    text-align: center;
+    padding-top: 28px;
+  }
+
+  .social-platforms-svg {
+    flex-wrap: wrap;
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer-content-links {
+    gap: 10px;
+  }
+
+  footer.footer.color-background-2 {
+    padding: 0px 20px;
+  }
+
+  .social-platforms-svg {
+    flex: 1;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  a.social-links {
+    display: flex;
+  }
+
+  .footer-content-links {
+    flex: 1;
+  }
+
+  a.link-items {
+    line-height: 18px;
+    font-size: 14px;
+  }
+
+  p.powered-by {
+    font-size: 14px;
+  }
+}
+</style>
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 {{- 'component-newsletter.css' | asset_url | stylesheet_tag -}}
@@ -54,7 +238,7 @@
                   {{ block.shopify_attributes }}
                 >
                   {%- if block.settings.heading != blank -%}
-                    <h2 class="h5 footer-block__heading">
+                    <h2 class="h5 footer-block__heading" data-heading="{{- block.settings.heading | escape -}}">
                       {{- block.settings.heading | escape -}}
                     </h2>
                   {%- endif -%}
@@ -183,6 +367,52 @@
           <div class="footer__content-middle-container">
             <div class="footer__content-middle-main">
               {%- if section.settings.enable_country_selector or section.settings.enable_language_selector -%}
+                <div class="border-container">
+                  <div class="footer-flex-container">
+                    <div class="footer-image-container">
+                      <div class="footer-image-1">
+                        <img
+                          class="footer-img-1"
+                          src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/original/image-manager/jdrf2.png"
+                        >
+                      </div>
+                      <div class="footer-image-2">
+                        <img
+                          class="footer-img-2"
+                          src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/original/image-manager/march2.png"
+                        >
+                      </div>
+                    </div>
+                    <div class="footer-text-container">
+                      <p class="powered-by">
+                        ISO 13485:2016 and MDSAP certified.<br>
+                        Copyright <sup>©</sup> 1997-2024 A.M.G. Medical Inc. All rights reserved.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-content-container">
+                  <div class="social-platforms-svg">
+                    <div class="social-icons">
+                      <a class="social-links" href="#">{% render 'linkdin-svg' %}</a>
+                    </div>
+                    <div class="social-icons">
+                      <a class="social-links" href="#">{% render 'facebook-svg' %}</a>
+                    </div>
+                    <div class="social-icons">
+                      <a class="social-links" href="#">{% render 'youtube-svg' %}</a>
+                    </div>
+                    <div class="social-icons">
+                      <a class="social-links" href="#">{% render 'instagram-svg' %}</a>
+                    </div>
+                  </div>
+                  <div class="footer-content-links">
+                    <a class="link-items" href="#">Data Collection Preferences</a>
+                    <a class="link-items" href="#">Privacy Policy</a>
+                    <a class="link-items" href="#">Terms & Conditions</a>
+                    <a class="link-items" href="#">Sustainable Development</a>
+                  </div>
+                </div>
                 <div
                   class="footer__column footer__column--localization"
                   {{ block.shopify_attributes }}
@@ -662,53 +892,53 @@
 
 {% javascript %}
   class LocalizationForm extends HTMLElement {
-    constructor() {
-      super();
-      this.elements = {
-        input: this.querySelector('input[name="locale_code"], input[name="country_code"]'),
-        button: this.querySelector('button'),
-        panel: this.querySelector('ul'),
-      };
-      this.elements.button.addEventListener('click', this.openSelector.bind(this));
-      this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
-      this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
+  constructor() {
+  super();
+  this.elements = {
+  input: this.querySelector('input[name="locale_code"], input[name="country_code"]'),
+  button: this.querySelector('button'),
+  panel: this.querySelector('ul'),
+  };
+  this.elements.button.addEventListener('click', this.openSelector.bind(this));
+  this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
+  this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
 
-      this.querySelectorAll('a').forEach((item) => item.addEventListener('click', this.onItemClick.bind(this)));
-    }
+  this.querySelectorAll('a').forEach((item) => item.addEventListener('click', this.onItemClick.bind(this)));
+  }
 
-    hidePanel() {
-      this.elements.button.setAttribute('aria-expanded', 'false');
-      this.elements.panel.setAttribute('hidden', true);
-    }
+  hidePanel() {
+  this.elements.button.setAttribute('aria-expanded', 'false');
+  this.elements.panel.setAttribute('hidden', true);
+  }
 
-    onContainerKeyUp(event) {
-      if (event.code.toUpperCase() !== 'ESCAPE') return;
+  onContainerKeyUp(event) {
+  if (event.code.toUpperCase() !== 'ESCAPE') return;
 
-      this.hidePanel();
-      this.elements.button.focus();
-    }
+  this.hidePanel();
+  this.elements.button.focus();
+  }
 
-    onItemClick(event) {
-      event.preventDefault();
-      this.elements.input.value = event.currentTarget.dataset.value;
-      this.querySelector('form')?.submit();
-    }
+  onItemClick(event) {
+  event.preventDefault();
+  this.elements.input.value = event.currentTarget.dataset.value;
+  this.querySelector('form')?.submit();
+  }
 
-    openSelector() {
-      this.elements.button.focus();
-      this.elements.panel.toggleAttribute('hidden');
-      this.elements.button.setAttribute(
-        'aria-expanded',
-        (this.elements.button.getAttribute('aria-expanded') === 'false').toString()
-      );
-    }
+  openSelector() {
+  this.elements.button.focus();
+  this.elements.panel.toggleAttribute('hidden');
+  this.elements.button.setAttribute(
+  'aria-expanded',
+  (this.elements.button.getAttribute('aria-expanded') === 'false').toString()
+  );
+  }
 
-    closeSelector(event) {
-      const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
-      if (event.relatedTarget === null || shouldClose) {
-        this.hidePanel();
-      }
-    }
+  closeSelector(event) {
+  const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
+  if (event.relatedTarget === null || shouldClose) {
+  this.hidePanel();
+  }
+  }
   }
 
   customElements.define('localization-form', LocalizationForm);
@@ -716,235 +946,235 @@
 
 {% schema %}
 {
-  "name": "t:sections.footer.name",
-  "max_blocks": 9,
-  "blocks": [
-    {
-      "type": "link_list",
-      "name": "t:sections.footer.blocks.link_list.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "default": "Quick links",
-          "label": "t:sections.footer.blocks.link_list.settings.heading.label",
-          "info": "t:sections.footer.blocks.link_list.settings.heading.info"
-        },
-        {
-          "type": "link_list",
-          "id": "menu",
-          "default": "footer",
-          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
-          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
-        }
-      ]
-    },
-    {
-      "type": "logo_info",
-      "name": "t:sections.footer.blocks.logo_info.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "logo",
-          "label": "t:sections.footer.blocks.logo_info.settings.logo.label"
-        },
-        {
-          "type": "image_picker",
-          "id": "logo_2",
-          "label": "t:sections.footer.blocks.logo_info.settings.logo_2.label",
-          "info": "t:sections.footer.blocks.logo_info.settings.logo_2.info"
-        },
-        {
-          "type": "range",
-          "id": "logo_width",
-          "min": 50,
-          "max": 250,
-          "step": 5,
-          "default": 100,
-          "unit": "t:sections.footer.blocks.logo_info.settings.logo_width.unit",
-          "label": "t:sections.footer.blocks.logo_info.settings.logo_width.label"
-        }
-      ]
-    },
-    {
-      "type": "contacts",
-      "name": "t:sections.footer.blocks.contacts.name",
-      "settings": [
-        {
-          "type": "textarea",
-          "id": "description",
-          "default": "Description",
-          "label": "t:sections.all.text.label"
-        },
-        {
-          "type": "richtext",
-          "id": "contact_info",
-          "default": "<p>Contact info</p>",
-          "label": "t:sections.footer.blocks.contacts.settings.contact_info.label"
-        }
-      ]
-    }
-  ],
-  "settings": [
-    {
-      "type": "select",
-      "id": "color_scheme",
-      "options": [
-        {
-          "value": "background-1",
-          "label": "t:sections.footer.settings.color_scheme.options__1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.footer.settings.color_scheme.options__2.label"
-        },
-        {
-          "value": "background-5",
-          "label": "t:sections.footer.settings.color_scheme.options__3.label"
-        },
-        {
-          "value": "background-3",
-          "label": "t:sections.footer.settings.color_scheme.options__4.label"
-        },
-        {
-          "value": "background-4",
-          "label": "t:sections.footer.settings.color_scheme.options__5.label"
-        }
-      ],
-      "default": "background-2",
-      "label": "t:sections.footer.settings.color_scheme.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_border",
-      "default": false,
-      "label": "t:sections.footer.settings.show_border.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_open_menu",
-      "default": false,
-      "label": "t:sections.footer.settings.enable_open_menu.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__3.content",
-      "info": "t:sections.footer.settings.header__4.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_country_selector",
-      "default": false,
-      "label": "t:sections.footer.settings.enable_country_selector.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__5.content",
-      "info": "t:sections.footer.settings.header__6.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_language_selector",
-      "default": true,
-      "label": "t:sections.footer.settings.enable_language_selector.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__7.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "payment_enable",
-      "default": false,
-      "label": "t:sections.footer.settings.payment_enable.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__10.content",
-      "info": "t:sections.footer.settings.header__10.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_follow_on_shop",
-      "default": true,
-      "label": "t:sections.footer.settings.enable_follow_on_shop.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__2.content",
-      "info": "t:sections.footer.settings.header__2.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_social",
-      "default": false,
-      "label": "t:sections.footer.settings.show_social.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__9.content",
-      "info": "t:sections.footer.settings.header__9.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_policy",
-      "default": false,
-      "label": "t:sections.footer.settings.show_policy.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__8.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_subscribe",
-      "default": true,
-      "label": "t:sections.footer.settings.enable_subscribe.label"
-    },
-    {
-      "type": "text",
-      "id": "heading",
-      "default": "Heading for subscribe form",
-      "label": "t:sections.all.heading.label"
-    },
-    {
-      "type": "select",
-      "id": "button_style",
-      "options": [
-        {
-          "value": "primary",
-          "label": "t:sections.all.button.button_style.options__1.label"
-        },
-        {
-          "value": "secondary",
-          "label": "t:sections.all.button.button_style.options__2.label"
-        },
-        {
-          "value": "tertiary",
-          "label": "t:sections.all.button.button_style.options__3.label"
-        }
-      ],
-      "default": "primary",
-      "label": "t:sections.all.button.button_style.label"
-    },
-    {
-      "type": "paragraph",
-      "content": "t:sections.footer.settings.subscribe_paragraph.content"
-    }
-  ],
-  "default": {
-    "blocks": [
-      {
-        "type": "logo_info"
-      },
-      {
-        "type": "link_list"
-      },
-      {
-        "type": "contacts"
-      }
-    ]
-  }
+"name": "t:sections.footer.name",
+"max_blocks": 9,
+"blocks": [
+{
+"type": "link_list",
+"name": "t:sections.footer.blocks.link_list.name",
+"settings": [
+{
+"type": "text",
+"id": "heading",
+"default": "Quick links",
+"label": "t:sections.footer.blocks.link_list.settings.heading.label",
+"info": "t:sections.footer.blocks.link_list.settings.heading.info"
+},
+{
+"type": "link_list",
+"id": "menu",
+"default": "footer",
+"label": "t:sections.footer.blocks.link_list.settings.menu.label",
+"info": "t:sections.footer.blocks.link_list.settings.menu.info"
+}
+]
+},
+{
+"type": "logo_info",
+"name": "t:sections.footer.blocks.logo_info.name",
+"limit": 1,
+"settings": [
+{
+"type": "image_picker",
+"id": "logo",
+"label": "t:sections.footer.blocks.logo_info.settings.logo.label"
+},
+{
+"type": "image_picker",
+"id": "logo_2",
+"label": "t:sections.footer.blocks.logo_info.settings.logo_2.label",
+"info": "t:sections.footer.blocks.logo_info.settings.logo_2.info"
+},
+{
+"type": "range",
+"id": "logo_width",
+"min": 50,
+"max": 250,
+"step": 5,
+"default": 100,
+"unit": "t:sections.footer.blocks.logo_info.settings.logo_width.unit",
+"label": "t:sections.footer.blocks.logo_info.settings.logo_width.label"
+}
+]
+},
+{
+"type": "contacts",
+"name": "t:sections.footer.blocks.contacts.name",
+"settings": [
+{
+"type": "textarea",
+"id": "description",
+"default": "Description",
+"label": "t:sections.all.text.label"
+},
+{
+"type": "richtext",
+"id": "contact_info",
+"default": "<p>Contact info</p>",
+"label": "t:sections.footer.blocks.contacts.settings.contact_info.label"
+}
+]
+}
+],
+"settings": [
+{
+"type": "select",
+"id": "color_scheme",
+"options": [
+{
+"value": "background-1",
+"label": "t:sections.footer.settings.color_scheme.options__1.label"
+},
+{
+"value": "background-2",
+"label": "t:sections.footer.settings.color_scheme.options__2.label"
+},
+{
+"value": "background-5",
+"label": "t:sections.footer.settings.color_scheme.options__3.label"
+},
+{
+"value": "background-3",
+"label": "t:sections.footer.settings.color_scheme.options__4.label"
+},
+{
+"value": "background-4",
+"label": "t:sections.footer.settings.color_scheme.options__5.label"
+}
+],
+"default": "background-2",
+"label": "t:sections.footer.settings.color_scheme.label"
+},
+{
+"type": "checkbox",
+"id": "show_border",
+"default": false,
+"label": "t:sections.footer.settings.show_border.label"
+},
+{
+"type": "checkbox",
+"id": "enable_open_menu",
+"default": false,
+"label": "t:sections.footer.settings.enable_open_menu.label"
+},
+{
+"type": "header",
+"content": "t:sections.footer.settings.header__3.content",
+"info": "t:sections.footer.settings.header__4.info"
+},
+{
+"type": "checkbox",
+"id": "enable_country_selector",
+"default": false,
+"label": "t:sections.footer.settings.enable_country_selector.label"
+},
+{
+"type": "header",
+"content": "t:sections.footer.settings.header__5.content",
+"info": "t:sections.footer.settings.header__6.info"
+},
+{
+"type": "checkbox",
+"id": "enable_language_selector",
+"default": true,
+"label": "t:sections.footer.settings.enable_language_selector.label"
+},
+{
+"type": "header",
+"content": "t:sections.footer.settings.header__7.content"
+},
+{
+"type": "checkbox",
+"id": "payment_enable",
+"default": false,
+"label": "t:sections.footer.settings.payment_enable.label"
+},
+{
+"type": "header",
+"content": "t:sections.footer.settings.header__10.content",
+"info": "t:sections.footer.settings.header__10.info"
+},
+{
+"type": "checkbox",
+"id": "enable_follow_on_shop",
+"default": true,
+"label": "t:sections.footer.settings.enable_follow_on_shop.label"
+},
+{
+"type": "header",
+"content": "t:sections.footer.settings.header__2.content",
+"info": "t:sections.footer.settings.header__2.info"
+},
+{
+"type": "checkbox",
+"id": "show_social",
+"default": false,
+"label": "t:sections.footer.settings.show_social.label"
+},
+{
+"type": "header",
+"content": "t:sections.footer.settings.header__9.content",
+"info": "t:sections.footer.settings.header__9.info"
+},
+{
+"type": "checkbox",
+"id": "show_policy",
+"default": false,
+"label": "t:sections.footer.settings.show_policy.label"
+},
+{
+"type": "header",
+"content": "t:sections.footer.settings.header__8.content"
+},
+{
+"type": "checkbox",
+"id": "enable_subscribe",
+"default": true,
+"label": "t:sections.footer.settings.enable_subscribe.label"
+},
+{
+"type": "text",
+"id": "heading",
+"default": "Heading for subscribe form",
+"label": "t:sections.all.heading.label"
+},
+{
+"type": "select",
+"id": "button_style",
+"options": [
+{
+"value": "primary",
+"label": "t:sections.all.button.button_style.options__1.label"
+},
+{
+"value": "secondary",
+"label": "t:sections.all.button.button_style.options__2.label"
+},
+{
+"value": "tertiary",
+"label": "t:sections.all.button.button_style.options__3.label"
+}
+],
+"default": "primary",
+"label": "t:sections.all.button.button_style.label"
+},
+{
+"type": "paragraph",
+"content": "t:sections.footer.settings.subscribe_paragraph.content"
+}
+],
+"default": {
+"blocks": [
+{
+"type": "logo_info"
+},
+{
+"type": "link_list"
+},
+{
+"type": "contacts"
+}
+]
+}
 }
 {% endschema %}

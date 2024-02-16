@@ -279,9 +279,11 @@ customElements.define('sticky-header', StickyHeader);
 
 	$('.have-third-level-menu').hover(function() {
     $('ul.navPage-subMenu-nested-list').stop(true, true).fadeIn('fast');
+	$("li.navPage-subMenu-item.child.second-level").eq(1).addClass("active-color");
 	}, function() {
 		var $megaMenu = $('ul.navPage-subMenu-nested-list');
 		$megaMenu.one('mouseleave', function() {
+			$("li.navPage-subMenu-item.child.second-level").eq(1).removeClass("active-color");
 			$megaMenu.stop(true, true).fadeOut('fast');
 		});
 	});
@@ -383,6 +385,13 @@ customElements.define('sticky-header', StickyHeader);
 			"default": "main-menu",
 			"label": "t:sections.header.settings.menu.label",
 			"info": "t:sections.header.settings.menu.info"
+		},
+		{
+			"type": "link_list",
+			"id": "menu_mobile",
+			"default": "main-menu",
+			"label": "Mobile drawer menu",
+			"info": "Add menu for mobile drawer"
 		},
 		{
 			"type": "link_list",

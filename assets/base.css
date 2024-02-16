@@ -878,28 +878,8 @@
 .shopify-policy__container-sm,
 .shopify-policy__container {
   width: 100%;
-  padding-right: 2rem;
-  padding-left: 2rem;
   margin-right: auto;
   margin-left: auto;
-}
-@media screen and (min-width: 1200px) {
-  .container,
-  .container-fluid,
-  .container-xxl,
-  .shopify-policy__container-xxl,
-  .container-xl,
-  .shopify-policy__container-xl,
-  .container-lg,
-  .shopify-policy__container-lg,
-  .container-md,
-  .shopify-policy__container-md,
-  .container-sm,
-  .shopify-policy__container-sm,
-  .shopify-policy__container {
-    padding-right: 5rem;
-    padding-left: 5rem;
-  }
 }
 
 @media (min-width: 576px) {
@@ -4236,7 +4216,7 @@ body.body--hidden {
 }
 
 .header__account {
-  display: none;
+  /* display: none; */
   align-items: center;
   position: relative;
 }

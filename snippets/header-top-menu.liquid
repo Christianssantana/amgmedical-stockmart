@@ -86,8 +86,16 @@
 												{% for child_link in link.links %}
 												<li class="navPage-subMenu-item child second-level">
 												<a href="{{ child_link.url }}" class="navPage-subMenu-action navPages-action {% if child_link.title == "Videos" %}have-third-level-menu{% endif %}">
-														<img width="100" height="100"
+														{% if child_link.title == "Articles" %}
+															<img width="100" height="100"
 															src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/original/image-manager/articles-navimg.jpg">
+														{% elsif child_link.title == "Videos" %}
+															<img width="100" height="100"
+															src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/original/image-manager/vedeos-navimg.jpg">
+														{% else %}
+															<img width="100" height="100"
+															src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/original/image-manager/pr-navimg.jpg">
+														{% endif %}
 														<span class="title">{{ child_link.title }}</span>
 													</a>
 												</li>
@@ -98,8 +106,8 @@
 													{% for child_link in link.links %}
 													{% if child_link.title == "Videos" %}
 													{% for grandchild_link in child_link.links %}  
-													<li class="navPage-subMenu-item {% if grandchild_link.title == "Medpro  Defense Videos" or grandchild_link.title == "MedPro Videos" or grandchild_link.title == "Protactive Videos" %}have-padding{% else %}no-padding{% endif %}">
-														<a class="navPage-subMenu-action {% if grandchild_link.title == "Medpro  Defense Videos" or grandchild_link.title == "MedPro Videos" or grandchild_link.title == "Protactive Videos" %}navPages-action{% endif %}""
+													<li class="navPage-subMenu-item {% if grandchild_link.title == "MedPro® Defense Videos" or grandchild_link.title == "MedPro® Videos" or grandchild_link.title == "Proactive™ Videos" %}have-padding{% else %}no-padding{% endif %}">
+														<a class="navPage-subMenu-action {% if grandchild_link.title == "MedPro® Defense Videos" or grandchild_link.title == "MedPro® Videos" or grandchild_link.title == "Proactive™ Videos" %}navPages-action{% endif %}"
 															href="{{ grandchild_link.url }}">
 															{{ grandchild_link.title }}
 														</a>
@@ -413,7 +421,7 @@
 		<div class="header__bottom-inner container">
 		<div class="custom-menu-insert-cs">
 			<div class="mini-container-menu">
-				{%- if section.settings.menu != blank -%}
+				{%- if section.settings.menu_mobile != blank -%}
 					{% render 'header-drawer' %}
 				{%- endif -%}
 				<ul class="link-list-custom">
@@ -449,26 +457,28 @@
 											{% for grandchild_link in child_link.links %}  
 											<li>
 												<a href= "{{ grandchild_link.url }}">
+													{% if child_link.title == "Shop by brand" %}
 													{% if grandchild_link.title == "Dex4" %}
 														<img loading="lazy" src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/100w/a/dex4-logo-wb_1680097538__63837.original.png" alt="">
-													{% elsif grandchild_link.title == "Medpro" %}
+													{% elsif grandchild_link.title == "MedPro" %}
 														<img loading="lazy" src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/100w/j/medpro_1675425012__82169.original.png" alt="">
-													{% elsif grandchild_link.title == "DEFENES" %}
+													{% elsif grandchild_link.title == "MedPro Defense" %}
 														<img loading="lazy" src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/100w/t/medprodefence_1675425032__50418.original.png" alt="">
 													{% elsif grandchild_link.title == "Nocospray" %}
 														<img loading="lazy" src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/100w/a/nacospray_1675425165__36109.original.png" alt="">
-													{% elsif grandchild_link.title == "ZORBI" %}
+													{% elsif grandchild_link.title == "Zorbi" %}
 														<img loading="lazy" src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/100w/w/zorbi_1675425178__59071.original.png" alt="">
-													{% elsif grandchild_link.title == "ELERS MEDICAL" %}
+													{% elsif grandchild_link.title == "Elers Medical" %}
 														<img loading="lazy" src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/100w/s/elers_1675425067__07491.original.png" alt="">
 													{% elsif grandchild_link.title == "Haigh" %}
 														<img loading="lazy" src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/100w/z/haigh_1675425084__19247.original.png" alt="">
-													{% elsif grandchild_link.title == "Ultra Block" %}
+													{% elsif grandchild_link.title == "Ultra Blok" %}
 														<img loading="lazy" src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/100w/a/ultrablock_1675425187__91527.original.png" alt="">
 													{% elsif grandchild_link.title == "Physiologic" %}
 														<img loading="lazy" src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/100w/b/physiologic_1675425278__23043.original.png" alt="">
-													{% elsif grandchild_link.title == "Protactive" %}
+													{% elsif grandchild_link.title == "Proactive" %}
 														<img loading="lazy" src="https://cdn11.bigcommerce.com/s-tt0s44em2e/images/stencil/100w/d/proactive_1675425142__41031.original.png" alt="">
+													{% endif %}
 													{% else %}
 														{{ grandchild_link.title }}
 													{% endif %}
