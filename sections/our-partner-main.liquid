@@ -1,0 +1,150 @@
+<style>
+  .our-partner-all {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  .our-partner-context h2 {
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 50px;
+    font-family: 'TT Norms', Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+  }
+
+  .our-partner-context p {
+    font-size: 16px;
+    font-family: 'TT Norms';
+    color: #000;
+  }
+  .our-partner-context {
+    max-width: 990px;
+    margin: auto;
+  }
+  .our-partner-block {
+    width: 100%;
+    max-width: 1240px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: auto;
+  }
+
+  .card-partner {
+    width: 100%;
+  }
+
+  .card-partner a img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .our-partner-context h2:after {
+    border-bottom: 3px solid rgba(150, 101, 158, 1);
+    content: '';
+    display: flex;
+    width: 124px;
+    margin: auto;
+    padding-top: 20px;
+  }
+  @media only screen and (max-width: 768px) {
+    .our-partner-block {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card-partner a img {
+      padding: 15px 8px;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .our-partner-block {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
+
+<div class="partner-p1-main">
+  <div class="container">
+    <div class="our-partner-all">
+      <div class="our-partner-context">
+        <h2>
+          {{ section.settings['partner-heading'] }}
+        </h2>
+        <P>
+          {{ section.settings['partner-paragraph'] }}
+        </P>
+      </div>
+      <div class="our-partner-block">
+        {%- for block in section.blocks -%}
+          <div class="card-partner">
+            <a href="{{ block.settings.url }}">
+              <img
+                srcset="
+                  {%- if block.settings.image.width >= 375 -%}{{ block.settings.image | image_url: width: '375x' }} 375w,{%- endif -%}
+                  {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: '750x' }} 750w,{%- endif -%}
+                  {%- if block.settings.image.width >= 1296 -%}{{ block.settings.image | image_url: width: '1296x' }} 1296w,{%- endif -%}
+                  {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: '1500x' }} 1500w,{%- endif -%}
+                  {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | image_url: width: '1780x' }} 1780w,{%- endif -%}
+                  {%- if block.settings.image.width >= 2000 -%}{{ block.settings.image | image_url: width: '2000x' }} 2000w,{%- endif -%}
+                  {%- if block.settings.image.width >= 2800 -%}{{ block.settings.image | image_url: width: '2800x' }} 2800w{%- endif -%}
+                "
+                src="{{ block.settings.image | image_url: width: '450x' }}"
+                loading="lazy"
+                alt="{{ block.settings.image.alt | escape }}"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio }}"
+                style="object-position: {{ block.settings.image.presentation.focal_point }}"
+              >
+            </a>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Our Partner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "partner-heading",
+      "label": "Heading",
+      "default": "Our Partners"
+    },
+    {
+      "type": "text",
+      "id": "partner-paragraph",
+      "label": "Paragraph",
+      "default": "At AMG Medical, we only partner with organizations who are passionate about what they do and how they help deliver the highest standard of care whether in a facility or at home."
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Block",
+      "type": "block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image Picker",
+          "id": "image"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Image Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our Partner",
+      "category": "Partner"
+    }
+  ]
+}
+{% endschema %}

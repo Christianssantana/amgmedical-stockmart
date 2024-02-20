@@ -1,0 +1,117 @@
+<style>
+  img.cover-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .cover-title h3 {
+    margin: 0px;
+    font-size: 32px;
+    line-height: 40px;
+    color: #fff;
+    font-weight: 400;
+  }
+
+  @media (min-width: 750px) {
+    .cover-title h3 {
+      font-size: 42px;
+      line-height: 60px;
+    }
+  }
+
+  .cover-description {
+    width: 100%;
+  }
+  .cover-description p {
+    margin-top: 40px 0px 21px;
+    font-size: 21px;
+    line-height: 33px;
+    color: white;
+  }
+
+  .min-container {
+    position: relative;
+  }
+
+  .cover-textarea {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cover-textarea-inner {
+    max-width: 800px;
+  }
+  @media only screen and (max-width: 768px) {
+    img.cover-img {
+      width: 100%;
+      min-height: 364px;
+    }
+  }
+</style>
+<div class="main-container">
+  <div class="min-container">
+    <div class="cover-image">
+      <img
+        srcset="
+          {%- if section.settings.cover_image.width >= 375 -%}{{ section.settings.cover_image | image_url: width: '375x' }} 375w,{%- endif -%}
+          {%- if section.settings.cover_image.width >= 750 -%}{{ section.settings.cover_image | image_url: width: '750x' }} 750w,{%- endif -%}
+          {%- if section.settings.cover_image.width >= 1296 -%}{{ section.settings.cover_image | image_url: width: '1296x' }} 1296w,{%- endif -%}
+          {%- if section.settings.cover_image.width >= 1500 -%}{{ section.settings.cover_image | image_url: width: '1500x' }} 1500w,{%- endif -%}
+          {%- if section.settings.cover_image.width >= 1780 -%}{{ section.settings.cover_image | image_url: width: '1780x' }} 1780w,{%- endif -%}
+          {%- if section.settings.cover_image.width >= 2000 -%}{{ section.settings.cover_image | image_url: width: '2000x' }} 2000w,{%- endif -%}
+          {%- if section.settings.cover_image.width >= 2800 -%}{{ section.settings.cover_image | image_url: width: '2800x' }} 2800w{%- endif -%}
+        "
+        src="{{ section.settings.cover_image | image_url: width: '450x' }}"
+        loading="lazy"
+        class="cover-img"
+        alt="{{ section.settings.cover_image.alt | escape }}"
+        width="{{ section.settings.cover_image.width }}"
+        height="{{ section.settings.cover_image.width | divided_by: section.settings.cover_image.aspect_ratio }}"
+        style="object-position: {{ section.settings.cover_image.presentation.focal_point }}"
+      >
+    </div>
+    <div class="cover-textarea container">
+      <div class="cover-textarea-inner">
+        <div class="cover-title">
+          <h3>{{ section.settings.cover_title }}</h3>
+        </div>
+        <div class="cover-description">{{ section.settings.cover_description }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "About us Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "cover_image",
+      "label": "Cover Image"
+    },
+    {
+      "type": "text",
+      "id": "cover_title",
+      "label": " Cover Title"
+    },
+    {
+      "type": "richtext",
+      "id": "cover_description",
+      "label": "Description"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About us Banner"
+    }
+  ]
+}
+{% endschema %}

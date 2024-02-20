@@ -107,7 +107,7 @@
 													{% if child_link.title == "Videos" %}
 													{% for grandchild_link in child_link.links %}  
 													<li class="navPage-subMenu-item {% if grandchild_link.title == "MedPro® Defense Videos" or grandchild_link.title == "MedPro® Videos" or grandchild_link.title == "Proactive™ Videos" %}have-padding{% else %}no-padding{% endif %}">
-														<a class="navPage-subMenu-action {% if grandchild_link.title == "MedPro® Defense Videos" or grandchild_link.title == "MedPro® Videos" or grandchild_link.title == "Proactive™ Videos" %}navPages-action{% endif %}"
+														<a class="navPage-subMenu-action {% if grandchild_link.title == "MedPro® Defense Videos" or grandchild_link.title == "MedPro® Videos" or grandchild_link.title == "Proactive™ Videos" %}navPages-action{% endif %}""
 															href="{{ grandchild_link.url }}">
 															{{ grandchild_link.title }}
 														</a>

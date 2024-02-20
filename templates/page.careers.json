@@ -1,0 +1,61 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "about_us_banner_W3dT3D": {
+      "type": "about-us-banner",
+      "settings": {
+        "cover_image": "shopify:\/\/shop_images\/download_1.jpg",
+        "cover_title": "Is helping people live healthier lives part of your DNA?",
+        "cover_description": "<p>If so, we can't wait to talk to you!<\/p>"
+      }
+    },
+    "join_images_acAg3a": {
+      "type": "join-images",
+      "settings": {
+        "some_text": "Why Join A.M.G. Medical?",
+        "sometext": "At A.M.G. Medical, we lead with compassion and integrity so that our customers make caring for others easier, safer and less stressful. For the past 50 years, we have helped people live and feel better, including our team of dedicated and compassionate employees.",
+        "imagewhy": "shopify:\/\/shop_images\/download.png"
+      }
+    },
+    "margin_image_bRA4Dh": {
+      "type": "margin-image",
+      "settings": {
+        "heading": "Our Culture",
+        "paragraph": "Our culture relies strongly on key values that all employees bring to the table: we look deeper to solve the right problems and believe in getting better all the time. That growth comes from our key asset – our employees. They are our most valued resource and are at the center of everything we do. In return, we foster personal, professional, and corporate growth.",
+        "image": "shopify:\/\/shop_images\/bea.jpg",
+        "heading1": "Constantly Evolving",
+        "paragraph1": "Our work environment is constantly evolving as we strive to offer the safest, most trustworthy products. To achieve that, our team thrives by rolling up their sleeves, learning and innovating, and no two days are the same.",
+        "image1": "shopify:\/\/shop_images\/download.jpg"
+      }
+    },
+    "career_contact_TCDGQe": {
+      "type": "career-contact",
+      "settings": {
+        "some_text": "Don’t see the position you’re looking for?",
+        "sometext": "Let us know what type of position you are looking for,and we will reach out to you when it becomes available!",
+        "btntext": "CONTACT US"
+      }
+    },
+    "amg_madical_VfE49p": {
+      "type": "amg-madical",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/banner-bottom-bg.webp",
+        "text_box_image": "shopify:\/\/shop_images\/white-logo_7f88fdde-96a4-44bf-9917-ff710d7f89da.png",
+        "box_content": "<p>We are providing healthcare solutions that allow people to live and feel better by way of brands that make caring for their health easier, safer, and less stressful.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "about_us_banner_W3dT3D",
+    "join_images_acAg3a",
+    "margin_image_bRA4Dh",
+    "career_contact_TCDGQe",
+    "amg_madical_VfE49p"
+  ]
+}

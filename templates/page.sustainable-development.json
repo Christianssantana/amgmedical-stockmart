@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "enviourment_policy_jWh8iX": {
+      "type": "enviourment-policy",
+      "settings": {
+        "sd_title": "Environmental Policy",
+        "sd_description": "A.M.G. Medical Inc. is a leading distributor of quality Medical Supplies & Home Health Care products to institutions & retailers.",
+        "sd_details": "<p>We believe that environmental protection is an integral part of doing business and we are committed to seeking continuous improvement in the area of environmental stewardship and being a responsible corporate citizen. We advance this responsibility through our approach to business, focusing on the social, economic and environmental impact of the healthcare solutions we provide.<\/p>"
+      }
+    },
+    "comments_c4Qkb8": {
+      "type": "comments",
+      "settings": {
+        "commits_title": "AMG values are reflected in our commitment to:",
+        "commits_image": "shopify:\/\/shop_images\/download_2.jpg",
+        "commitments_text": "<p><strong>Comply with applicable environmental legal requirements<\/strong> and meet voluntary requirements that are endorsed by our senior management team.<br\/><br\/><\/p><p><strong>Doing business with those suppliers who share our commitment<\/strong> to the environment, and who pursue practices which conform to applicable environmental standards. AMG expects suppliers to promptly develop and implement plans and programs to correct any non-compliant practices.<br\/><br\/><\/p><p><strong>Strive to prevent, control and reduce pollution<\/strong> using standards, procedures or other controls and by minimizing:<\/p><ul><li>energy consumption and greenhouse gas emissions;<\/li><li>waste generation;<\/li><li>spills and releases.<br\/><\/li><\/ul><p><strong>Continually improve<\/strong> our environmental performance through:<\/p><ul><li>establishing environmental and sustainability objectives, targets and programs;<\/li><li>regularly reviewing the environmental management system;<\/li><li>correcting problem situations which could not be prevented, in a timely manner.<\/li><\/ul><p><strong>Build an environmentally aware culture<\/strong> through communication, where:<\/p><ul><li>the importance of environmental protection and sustainability is respected at all levels of the organization;<\/li><li>dialogue and sharing of ideas are encouraged and supported;<\/li><li>team members, including contractors performing work on behalf of AMG, understand and embrace their roles and responsibilities related to this Policy and the Environmental Management System; and<\/li><li>team members engage, collaborate with and learn from stakeholders including customers, suppliers, investors, regulators, industry members & the public in order to minimize any adverse impact on the environment;<\/li><li>environmental initiatives and performance are communicated to stakeholders on a regular basis.<br\/><br\/><\/li><\/ul><p><strong>Measures and Evaluation<\/strong> to ensure that our management system is effective. AMG will measure progress regularly by way of:<br\/><\/p><ul><li>Senior management reviews to implement and follow up on environmental programs;<\/li><li>Performance measures which will be reviewed and updated monthly;<\/li><li>An environment questionnaire & Risk Evaluation to be included in supplier evaluations in order to assist in selecting suppliers and to evaluate environmental performance of some of our suppliers;<\/li><li>Annual audits which are performed as part of recycling programs.<\/li><\/ul><p> <\/p><p><br\/><em>Approved by the A.M.G. Medical Inc. Board of Management<\/em><\/p>"
+      }
+    },
+    "amg_madical_i4xfNh": {
+      "type": "amg-madical",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/banner-bottom-bg.webp",
+        "text_box_image": "shopify:\/\/shop_images\/white-logo_7f88fdde-96a4-44bf-9917-ff710d7f89da.png",
+        "box_content": "<p>We are providing healthcare solutions that allow people to live and feel better by way of brands that make caring for their health easier, safer, and less stressful.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "enviourment_policy_jWh8iX",
+    "comments_c4Qkb8",
+    "amg_madical_i4xfNh"
+  ]
+}

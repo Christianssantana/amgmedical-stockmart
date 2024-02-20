@@ -1,0 +1,111 @@
+<style>
+  p {
+    margin: 0;
+  }
+  .why-banner img {
+    width: 100%;
+    height: auto;
+  }
+  .text-padding {
+    padding-top: 130px;
+    padding-bottom: 110px;
+  }
+  .why-heading p {
+    color: rgba(93, 34, 108, 1);
+    font-weight: normal;
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-size: 40px;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+  .why-txt p {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 600px;
+    line-height: normal;
+  }
+  .text-padding {
+    width: 100%;
+    max-width: 70%;
+  }
+  @media screen and (max-width: 1000px) {
+    .text-padding {
+      max-width: unset;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .why-heading p {
+      text-align: center;
+      line-height: normal;
+      font-size: 32px;
+    }
+  }
+</style>
+
+<div class="container">
+  <div class="text-padding">
+    <div class="why-heading">
+      <p>{{ section.settings.some_text }}</p>
+    </div>
+    <div class="why-txt">
+      <p>{{ section.settings.sometext }}</p>
+    </div>
+  </div>
+
+  <div class="why-banner">
+    {% if section.settings.imagewhy != blank %}
+      <img
+        srcset="
+          {%- if section.settings.imagewhy.width >= 375 -%}{{ section.settings.imagewhy | image_url: width: '375x' }} 375w,{%- endif -%}
+          {%- if section.settings.imagewhy.width >= 750 -%}{{ section.settings.imagewhy | image_url: width: '750x' }} 750w,{%- endif -%}
+          {%- if section.settings.imagewhy.width >= 1240 -%}{{ section.settings.imagewhy | image_url: width: '1240x' }} 1240w,{%- endif -%}
+          {%- if section.settings.imagewhy.width >= 1500 -%}{{ section.settings.imagewhy | image_url: width: '1500x' }} 1500w,{%- endif -%}
+          {%- if section.settings.imagewhy.width >= 1780 -%}{{ section.settings.imagewhy | image_url: width: '1780x' }} 1780w,{%- endif -%}
+          {%- if section.settings.imagewhy.width >= 2000 -%}{{ section.settings.imagewhy | image_url: width: '2000x' }} 2000w,{%- endif -%}
+          {%- if section.settings.imagewhy.width >= 2800 -%}{{ section.settings.imagewhy | image_url: width: '2800x' }} 2800w{%- endif -%}
+        "
+        src="{{ section.settings.imagewhy | image_url: width: '2000x' }}"
+        loading="lazy"
+        alt="{{ section.settings.imagewhy.alt | escape }}"
+        width="{{ section.settings.imagewhy.width }}"
+        height="{{ section.settings.imagewhy.width | divided_by: section.settings.imagewhy.aspect_ratio }}"
+        style="object-position: {{ section.settings.imagewhy.presentation.focal_point }}"
+      >
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "why join",
+  "settings": [
+    {
+      "type": "text",
+      "id": "some_text",
+      "label": "Please enter some text"
+    },
+
+    {
+      "type": "text",
+      "id": "sometext",
+      "label": "Please enter some text"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "imagewhy",
+      "label": "Add-Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "why join",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

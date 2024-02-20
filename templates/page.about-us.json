@@ -1,0 +1,225 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "about_us_banner_DDaUDX": {
+      "type": "about-us-banner",
+      "settings": {
+        "cover_image": "shopify:\/\/shop_images\/about-cover.jpg",
+        "cover_title": "We operate with compassion and integrity to help you make caring for others easier",
+        "cover_description": "<p>For 50 years, AMG Medical has been a leading partner that healthcare professionals, caregivers and patients can rely upon to deliver the highest standard of care whether in a facility or at home.<\/p>"
+      }
+    },
+    "about_our_story_K6NRUU": {
+      "type": "about-our-story",
+      "settings": {
+        "story_heading": "Our Story",
+        "story_description": "AMG Medical was founded in 1972 with a vision of creating a best-in class medical supply company, founder Allan M. Goldenberg started on the path to building one of Canada’s most trusted healthcare partners.",
+        "read_more": "",
+        "year_image": "shopify:\/\/shop_images\/years.jpg"
+      }
+    },
+    "about_our_mission_PgfETd": {
+      "type": "about-our-mission",
+      "blocks": {
+        "content_kb6qff": {
+          "type": "content",
+          "settings": {
+            "change_direction": false,
+            "title_text": "Our mission",
+            "description_text": "<p>We are responsive and thoughtful in meeting customer needs for high-quality healthcare and infection control products and solutions. We strive to build strong relationships, trust, value and peace of mind for our supply partners, distributors, healthcare professionals, and consumers.<\/p>",
+            "content_image": "shopify:\/\/shop_images\/mission-img.jpg"
+          }
+        },
+        "content_UWxWFz": {
+          "type": "content",
+          "settings": {
+            "change_direction": true,
+            "title_text": "Our vision",
+            "description_text": "<p>We strive towards being seen as a best-in-class infection control and healthcare product company.<\/p>",
+            "content_image": "shopify:\/\/shop_images\/vision-img.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "content_kb6qff",
+        "content_UWxWFz"
+      ],
+      "settings": {
+      }
+    },
+    "amg_medical_numbers_EPMrmK": {
+      "type": "amg-medical-numbers",
+      "blocks": {
+        "content_6jkJU3": {
+          "type": "content",
+          "settings": {
+            "amg_sub_text": "Trusted by over",
+            "amg_sub_number": "90%",
+            "amg_sub_textt": "of Canadian Hospitals"
+          }
+        },
+        "content_9aMTYd": {
+          "type": "content",
+          "settings": {
+            "amg_sub_text": "Over",
+            "amg_sub_number": "5M",
+            "amg_sub_textt": "products sold in 2021"
+          }
+        },
+        "content_3HDPRV": {
+          "type": "content",
+          "settings": {
+            "amg_sub_text": "Sold in over",
+            "amg_sub_number": "11K",
+            "amg_sub_textt": "Canadian pharmacies"
+          }
+        }
+      },
+      "block_order": [
+        "content_6jkJU3",
+        "content_9aMTYd",
+        "content_3HDPRV"
+      ],
+      "settings": {
+        "amg_title": "AMG Medical by the numbers"
+      }
+    },
+    "medical_banner_YDYLzc": {
+      "type": "medical-banner",
+      "settings": {
+        "new_banner_image": "shopify:\/\/shop_images\/about-banner2.jpg",
+        "new_banner_text": "<p>AMG Medical Inc. manufactures and distributes home healthcare and medical professional products<\/p>"
+      }
+    },
+    "our_services_cDnCLM": {
+      "type": "our-services",
+      "blocks": {
+        "content_NwmDeG": {
+          "type": "content",
+          "settings": {
+            "service_image": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"59\" height=\"49\" viewbox=\"0 0 59 49\" fill=\"none\">\n<g clip-path=\"url(#clip0_1422_2679)\">\n<path d=\"M58.88 47.56H1.25V0.399994\" stroke=\"#5D226C\" stroke-width=\"2.5\" stroke-miterlimit=\"10\"><\/path>\n<path d=\"M10.3101 41.52V29.91C10.3101 28.26 11.6601 26.91 13.3101 26.91H15.7901C17.4401 26.91 18.7901 28.26 18.7901 29.91V41.52\" stroke=\"#5D226C\" stroke-width=\"2.5\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M26.3999 41.52V19.84C26.3999 18.19 27.7499 16.84 29.3999 16.84H31.8799C33.5299 16.84 34.8799 18.19 34.8799 19.84V41.53\" stroke=\"#5D226C\" stroke-width=\"2.5\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M41.3501 28.19C41.3501 32.1 44.7601 35.27 48.9601 35.27C53.1601 35.27 56.5701 32.1 56.5701 28.19C56.5701 24.28 52.5101 22.57 48.9401 20.76C45.3801 18.95 41.3201 17.24 41.3201 13.33C41.3201 9.42 44.7201 6.25 48.9301 6.25C53.1401 6.25 56.5401 9.42 56.5401 13.33\" stroke=\"#5D226C\" stroke-width=\"2.5\" stroke-miterlimit=\"10\" stroke-linecap=\"round\"><\/path>\n<path d=\"M48.9202 6.23V1.25\" stroke=\"#5D226C\" stroke-width=\"2.5\" stroke-miterlimit=\"10\" stroke-linecap=\"round\"><\/path>\n<path d=\"M48.9202 40.29V35.31\" stroke=\"#5D226C\" stroke-width=\"2.5\" stroke-miterlimit=\"10\" stroke-linecap=\"round\"><\/path>\n<\/g>\n<defs>\n<clippath id=\"clip0_1422_2679\">\n<rect width=\"58.88\" height=\"48.81\" fill=\"white\"><\/rect>\n<\/clippath>\n<\/defs>\n<\/svg>",
+            "service_title": "High quality, competitive costing and quick response",
+            "service_description": "<p>Our comprehensive product lines adhere to world class standards for high quality, competitive costing and quick response. Through our diverse and high-quality portfolio of brands, we aim to deliver the latest innovations in healthcare and infection control, from diagnostic systems to surface disinfection and more.<\/p>"
+          }
+        },
+        "content_mPjRy7": {
+          "type": "content",
+          "settings": {
+            "service_image": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"64\" height=\"62\" viewbox=\"0 0 64 62\" fill=\"none\">\n<g clip-path=\"url(#clip0_1422_2671)\">\n<path d=\"M61.91 37.45L49.97 30.67L61.76 23.64L52.29 7.76L40.83 14.59V1.25H22.33V14.99L10.38 8.21L1.25 24.3L13.19 31.07L1.4 38.11L10.87 53.99L22.33 47.16V60.5H40.83V46.75L52.79 53.54L61.91 37.45Z\" stroke=\"#5D226C\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M31.58 42.16V52\" stroke=\"#5D226C\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M31.58 24.07V36.98\" stroke=\"#5D226C\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M31.58 11.78V19.06\" stroke=\"#5D226C\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M35.62 31.12C38.33 32.21 40.11 33.69 36.6 35.27C36.6 35.27 31.6 36.92 28.85 38.34C28.85 38.34 23.31 41.22 29.35 45.04C29.35 45.04 31.81 46.88 35.31 49.42\" stroke=\"#5D226C\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M38.19 19.77C38.19 19.77 30.86 17.3 27.19 21.47C27.19 21.47 22.97 26.08 27.45 28.6\" stroke=\"#5D226C\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M31.58 12.99C32.4084 12.99 33.08 12.3184 33.08 11.49C33.08 10.6616 32.4084 9.98999 31.58 9.98999C30.7515 9.98999 30.08 10.6616 30.08 11.49C30.08 12.3184 30.7515 12.99 31.58 12.99Z\" fill=\"#5D226C\" stroke=\"#5D226C\" stroke-width=\"2.5\" stroke-miterlimit=\"10\"><\/path>\n<\/g>\n<defs>\n<clippath id=\"clip0_1422_2671\">\n<rect width=\"63.16\" height=\"61.75\" fill=\"white\"><\/rect>\n<\/clippath>\n<\/defs>\n<\/svg>",
+            "service_title": "We offer an outstanding range of 2500 healthcare products",
+            "service_description": "<p>With over 2,500 healthcare products available to empower people to live and feel better, we offer a one-stop solution across our core healthcare pillars, Infection Control, Diabetes Control and Pain Management.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_NwmDeG",
+        "content_mPjRy7"
+      ],
+      "settings": {
+      }
+    },
+    "about_brands_Px8RbK": {
+      "type": "about-brands",
+      "blocks": {
+        "content_HJJaki": {
+          "type": "content",
+          "settings": {
+            "brands_image": "shopify:\/\/shop_images\/medpro_1675425012__82169.original.png",
+            "brands_details": "<p>Medical disposables & devices that health professionals depend on.<\/p>"
+          }
+        },
+        "content_zmgJC9": {
+          "type": "content",
+          "settings": {
+            "brands_image": "shopify:\/\/shop_images\/medprodefence_1675425032__50418.original.png",
+            "brands_details": "<p>Infection Control & Waste Management products solutions that health professionals depend on.<\/p>"
+          }
+        },
+        "content_mQD3ik": {
+          "type": "content",
+          "settings": {
+            "brands_image": "shopify:\/\/shop_images\/physiologic_1675425278__23043.original.png",
+            "brands_details": "<p>Thermometry, Blood Pressure and other health monitoring devices offering leading technology and dependable accuracy.<\/p>"
+          }
+        },
+        "content_THKVEb": {
+          "type": "content",
+          "settings": {
+            "brands_image": "shopify:\/\/shop_images\/proactive_1675425142__41031.original.png",
+            "brands_details": "<p>Feel better, stay fit. Pain Management and Therapeutic products that help you feel better and stay fit.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_HJJaki",
+        "content_zmgJC9",
+        "content_mQD3ik",
+        "content_THKVEb"
+      ],
+      "settings": {
+        "b_title": "Brands you can trust.",
+        "b_description": "<p>Through our diverse portfolio of brands, we aim to deliver the latest innovations in healthcare and infection control, from diagnostic systems to surface disinfection and more.<\/p>"
+      }
+    },
+    "our_lidership_tM7hQU": {
+      "type": "our-lidership",
+      "settings": {
+        "team_title": "Our Leadership team",
+        "team_description": "<p>AMG Medical is dedicated to improving the quality of life for people. Our leadership team continuously brings innovation, compassion and results-driven solutions to the forefront of our business.<\/p>",
+        "meet_team_button": "",
+        "team_banner_img": "shopify:\/\/shop_images\/about-banner3.jpg"
+      }
+    },
+    "margin_up_HPCxNc": {
+      "type": "margin-up",
+      "blocks": {
+        "content_W7yjK8": {
+          "type": "content",
+          "settings": {
+            "content_text": "<p>Every career at AMG Medical is customer-focused and solutions-based at its core. But more than that— beyond the “9-to-5”—we are a dedicated team who care deeply about the health outcomes of those that we serve.<\/p>"
+          }
+        },
+        "content_7PVW9V": {
+          "type": "content",
+          "settings": {
+            "content_text": "<p>Our entire team strives to provide innovative and compassionate healthcare-based business solutions to all. We cultivate a team environment and support and manage our employees in ways to ensure that they are well trained, responsive, energetic and productive.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_W7yjK8",
+        "content_7PVW9V"
+      ],
+      "settings": {
+        "position_title": "<h2>Like what you`re seeing?<br\/>Apply now<\/h2>",
+        "position_button": ""
+      }
+    },
+    "amg_madical_mQNjXb": {
+      "type": "amg-madical",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/banner-bottom-bg.webp",
+        "text_box_image": "shopify:\/\/shop_images\/white-logo_7f88fdde-96a4-44bf-9917-ff710d7f89da.png",
+        "box_content": "<p>We are providing healthcare solutions that allow people to live and feel better by way of brands that make caring for their health easier, safer, and less stressful.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "about_us_banner_DDaUDX",
+    "about_our_story_K6NRUU",
+    "about_our_mission_PgfETd",
+    "amg_medical_numbers_EPMrmK",
+    "medical_banner_YDYLzc",
+    "our_services_cDnCLM",
+    "about_brands_Px8RbK",
+    "our_lidership_tM7hQU",
+    "margin_up_HPCxNc",
+    "amg_madical_mQNjXb"
+  ]
+}

@@ -1,0 +1,115 @@
+<style>
+  .amg-title h3 {
+  margin-top: 0;
+  font-size: 35px;
+  line-height: 50px;
+  color: #5d226c;
+  font-weight: 400;
+  letter-spacing: .03em;
+  text-align: center;
+  }
+.amg-min-container {
+    flex-wrap: wrap;
+}
+  .amg-sub-text p {
+  color: #5d226c;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0px 0px 21px;
+  letter-spacing: .03em;
+  }
+
+  .amg-sub-number h3 {
+  font-size: 50px;
+  line-height: 70px;
+  margin: 32px 0px 10px;
+  font-weight: 600;
+  letter-spacing: .03em;
+  }
+
+  .amg-min-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+  }
+
+  .amg-sub-container {
+  margin-top: 50px;
+  padding: 50px;
+  border: 1px solid #d5bed7;
+  background-color: #f4eaf4;
+  text-align: center;
+  }
+
+  .amg-main-container {
+  max-width: 1100px;
+  padding: 0 40px;
+  width: 100%;
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 160px;
+  }
+  
+
+</style>
+<div class="amg-main-container">
+  <div class="amg-title">
+    <h3>{{ section.settings.amg_title }}</h3>
+  </div>
+  <div class="amg-min-container">
+    {% for block in section.blocks %}
+      <div class="amg-sub-container">
+        <div class="amg-sub-text">
+          <p>{{ block.settings.amg_sub_text }}</p>
+        </div>
+        <div class="amg-sub-number">
+          <h3>{{ block.settings.amg_sub_number }}</h3>
+        </div>
+        <div class="amg-sub-text">
+          <p>{{ block.settings.amg_sub_textt }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+"name": "AMG Medical Numbers",
+"settings": [
+{
+"type": "text",
+"id": "amg_title",
+"label": "Title"
+}
+],
+"blocks": [
+{
+"name": "Content Box",
+"type": "content",
+"settings": [
+{
+"type": "text",
+"id": "amg_sub_text",
+"label": "Text"
+},
+{
+"type": "text",
+"id": "amg_sub_number",
+"label": "Text"
+},
+{
+"type": "text",
+"id": "amg_sub_textt",
+"label": "Text"
+}
+]
+}
+],
+"presets": [
+{
+"name": "AMG Medical Numbers"
+}
+]
+}
+{% endschema %}

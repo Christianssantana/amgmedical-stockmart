@@ -1,0 +1,143 @@
+
+<style>
+  .commits-main-container {
+  padding: 0px 50px;
+  background-color: #f6f5f5;
+  }
+  .commits-title h3 {
+  color: rgba(93, 34, 108, 1);
+  font-weight: normal;
+  font-family: "TT Norms";
+  font-style: normal;
+  font-size: 34px;
+  text-align: left;
+  margin: 0;
+  letter-spacing: normal;
+  line-height: normal;
+  }
+.commits-min-container {
+    max-width: 1200px;
+    margin: auto;
+}
+  img.flex-img {
+  width: 100%;
+  height: auto;
+  max-width: 585px;
+  min-height: 385px;
+  object-fit: cover;
+  margin-top: -15%;
+  }
+
+  .flex-image {
+  display: flex;
+  }
+
+  .commits-sub-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  }
+
+  .commits-title {
+  width: 100%;
+  max-width: 409px;
+  }
+
+  .commits-min-container {
+  padding-bottom: 100px;
+  }
+
+  .commitments-text p {
+  margin: 0;
+  font-size: 18px;
+  font-family: "TT Norms";
+  color: #000;
+  }
+
+  .commitments-text {
+  width: 100%;
+  max-width: 820px;
+  padding-top: 5%;
+  }
+
+  .commitments-text {
+  width: 100%;
+  max-width: 820px;
+  }
+
+  @media screen and (max-width: 850px){
+  .commits-sub-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  }
+
+  img.flex-img {
+  margin-top: 0;
+  }
+
+  .commits-title {
+  max-width: 100%;
+  padding-top: 10%;
+  }
+
+
+  .commits-title h3 {
+  font-weight: 700;
+  font-size: 30px;
+  }
+  }
+
+  @media screen and (max-width: 550px){
+
+  .commits-title h3 {
+  font-size: 24px;
+  }
+
+
+  .commits-main-container {
+  padding: 0px 30px;
+  }
+  }
+</style>
+<div class="commits-main-container">
+  <div class="commits-min-container">
+    <div class="commits-sub-container">
+      <div class="commits-title">
+        <h3>{{ section.settings.commits_title }}</h3>
+      </div>
+      <div class="flex-image">
+        <img class="flex-img" src="{{ section.settings.commits_image | image_url }}">
+      </div>
+    </div>
+    <div class="commitments-text">{{ section.settings.commitments_text }}</div>
+  </div>
+</div>
+{% schema %}
+{
+"name": "Our Commitments",
+"settings": [
+{
+"type": "text",
+"id": "commits_title",
+"label": "Title"
+},
+{
+"type": "image_picker",
+"id": "commits_image",
+"label": "Image"
+},
+{
+"type": "richtext",
+"id": "commitments_text",
+"label": "Commitments"
+}
+
+],
+"presets": [
+{
+"name": "Our Commitments"
+}
+]
+}
+{% endschema %}

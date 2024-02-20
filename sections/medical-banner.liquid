@@ -1,0 +1,98 @@
+<style>
+  img.new-banner-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .new-banner-image {
+    display: flex;
+  }
+
+  .new-banner-min {
+    position: relative;
+  }
+
+  .new-banner-text p {
+    margin: 0px 0px 10.9px;
+    color: #fff;
+    font-size: 45px;
+    line-height: 55px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+
+  .new-banner-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media only screen and (max-width: 768px) {
+    img.new-banner-img {
+      width: 100%;
+      height: 500px;
+    }
+
+    .new-banner-text p {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+</style>
+<div class="new-banner-container">
+  <div class="new-banner-min">
+    <div class="new-banner-image">
+      <img
+        srcset="
+          {%- if section.settings.new_banner_image.width >= 375 -%}{{ section.settings.new_banner_image | image_url: width: '375x' }} 375w,{%- endif -%}
+          {%- if section.settings.new_banner_image.width >= 750 -%}{{ section.settings.new_banner_image | image_url: width: '750x' }} 750w,{%- endif -%}
+          {%- if section.settings.new_banner_image.width >= 1296 -%}{{ section.settings.new_banner_image | image_url: width: '1296x' }} 1296w,{%- endif -%}
+          {%- if section.settings.new_banner_image.width >= 1500 -%}{{ section.settings.new_banner_image | image_url: width: '1500x' }} 1500w,{%- endif -%}
+          {%- if section.settings.new_banner_image.width >= 1780 -%}{{ section.settings.new_banner_image | image_url: width: '1780x' }} 1780w,{%- endif -%}
+          {%- if section.settings.new_banner_image.width >= 2000 -%}{{ section.settings.new_banner_image | image_url: width: '2000x' }} 2000w,{%- endif -%}
+          {%- if section.settings.new_banner_image.width >= 2800 -%}{{ section.settings.new_banner_image | image_url: width: '2800x' }} 2800w{%- endif -%}
+        "
+        src="{{ section.settings.new_banner_image | image_url: width: '1920x' }}"
+        loading="lazy"
+        class="new-banner-img"
+        alt="{{ section.settings.new_banner_image.alt | escape }}"
+        width="{{ section.settings.new_banner_image.width }}"
+        height="{{ section.settings.new_banner_image.width | divided_by: section.settings.new_banner_image.aspect_ratio }}"
+        style="object-position: {{ section.settings.new_banner_image.presentation.focal_point }}"
+      >
+    </div>
+    <div class="new-banner-text">
+      <div class="container">
+        {{ section.settings.new_banner_text }}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Medical Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "new_banner_image",
+      "label": "Image"
+    },
+    {
+      "type": "richtext",
+      "id": "new_banner_text",
+      "label": "Banner Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Medical Banner"
+    }
+  ]
+}
+{% endschema %}

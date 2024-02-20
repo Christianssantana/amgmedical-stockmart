@@ -1,0 +1,122 @@
+<style>
+  .team-title h3 {
+    margin: 0px 0px 10.9px;
+    font-size: 35px;
+    line-height: 50px;
+    color: #5d226c;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+
+  .team-description p {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 40px 0px 21px;
+  }
+
+  .meet-team-button {
+    display: flex;
+  }
+
+  .team-banner-image {
+    display: flex;
+    margin-bottom: -175px;
+  }
+
+  a.meet-team-btn {
+    background: #fff;
+    border: 1px solid #5d226c;
+    color: #5d226c;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 14px 38.9px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 0px 0px 14px;
+  }
+
+  .team-min-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 100px 0;
+  }
+
+  .team-textarea {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  img.team-banner-img {
+    width: 100%;
+    height: auto;
+    min-height: 560px;
+    object-fit: cover;
+  }
+</style>
+<div class="container">
+  <div class="team-min-container">
+    <div class="team-textarea">
+      <div class="team-title">
+        <h3>{{ section.settings.team_title }}</h3>
+      </div>
+      <div class="team-description">{{ section.settings.team_description }}</div>
+    </div>
+    <div class="meet-team-button">
+      <a class="meet-team-btn" href="{{ section.settings.meet_team_button }}">MEET THE TEAM</a>
+    </div>
+  </div>
+  <div class="team-banner-image">
+    <img
+      srcset="
+        {%- if section.settings.team_banner_img.width >= 375 -%}{{ section.settings.team_banner_img | image_url: width: '375x' }} 375w,{%- endif -%}
+        {%- if section.settings.team_banner_img.width >= 750 -%}{{ section.settings.team_banner_img | image_url: width: '750x' }} 750w,{%- endif -%}
+        {%- if section.settings.team_banner_img.width >= 1296 -%}{{ section.settings.team_banner_img | image_url: width: '1296x' }} 1296w,{%- endif -%}
+        {%- if section.settings.team_banner_img.width >= 1500 -%}{{ section.settings.team_banner_img | image_url: width: '1500x' }} 1500w,{%- endif -%}
+        {%- if section.settings.team_banner_img.width >= 1780 -%}{{ section.settings.team_banner_img | image_url: width: '1780x' }} 1780w,{%- endif -%}
+        {%- if section.settings.team_banner_img.width >= 2000 -%}{{ section.settings.team_banner_img | image_url: width: '2000x' }} 2000w,{%- endif -%}
+        {%- if section.settings.team_banner_img.width >= 2800 -%}{{ section.settings.team_banner_img | image_url: width: '2800x' }} 2800w{%- endif -%}
+      "
+      src="{{ section.settings.team_banner_img | image_url: width: '450x' }}"
+      loading="lazy"
+      class="team-banner-img"
+      alt="{{ section.settings.team_banner_img.alt | escape }}"
+      width="{{ section.settings.team_banner_img.width }}"
+      height="{{ section.settings.team_banner_img.width | divided_by: section.settings.team_banner_img.aspect_ratio }}"
+      style="object-position: {{ section.settings.team_banner_img.presentation.focal_point }}"
+    >
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Our Team",
+  "settings": [
+    {
+      "type": "text",
+      "id": "team_title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "team_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "meet_team_button",
+      "label": "Button"
+    },
+    {
+      "type": "image_picker",
+      "id": "team_banner_img",
+      "label": " Banner Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our Team"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,98 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "our_partner_main_EntGTC": {
+      "type": "our-partner-main",
+      "blocks": {
+        "block_cHawKw": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1.png",
+            "url": "#"
+          }
+        },
+        "block_NJhLbB": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2.png",
+            "url": ""
+          }
+        },
+        "block_MadCLJ": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3.png",
+            "url": ""
+          }
+        },
+        "block_f9YeNU": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4.png",
+            "url": ""
+          }
+        },
+        "block_mVQqzF": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2.png",
+            "url": ""
+          }
+        },
+        "block_qVL4p3": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3.png",
+            "url": ""
+          }
+        },
+        "block_LLqrMr": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4.png",
+            "url": ""
+          }
+        },
+        "block_Ergpa7": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1.png",
+            "url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "block_cHawKw",
+        "block_NJhLbB",
+        "block_MadCLJ",
+        "block_f9YeNU",
+        "block_mVQqzF",
+        "block_qVL4p3",
+        "block_LLqrMr",
+        "block_Ergpa7"
+      ],
+      "settings": {
+        "partner-heading": "Our Partners",
+        "partner-paragraph": "At AMG Medical, we only partner with organizations who are passionate about what they do and how they help deliver the highest standard of care whether in a facility or at home."
+      }
+    },
+    "amg_madical_JMUpMU": {
+      "type": "amg-madical",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/banner-bottom-bg.webp",
+        "text_box_image": "shopify:\/\/shop_images\/white-logo_7f88fdde-96a4-44bf-9917-ff710d7f89da.png",
+        "box_content": "<p>We are providing healthcare solutions that allow people to live and feel better by way of brands that make caring for their health easier, safer, and less stressful.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "our_partner_main_EntGTC",
+    "amg_madical_JMUpMU"
+  ]
+}

@@ -1,0 +1,77 @@
+<style>
+    .b-title h3 {
+      margin-top: 0px 0px 10.9px;
+      font-size: 35px;
+      line-height: 50px;
+      color: #5d226c;
+      font-weight: 400;
+      letter-spacing: .03em;
+  }
+
+  .b-description p {
+      max-width: 700px;
+      font-size: 20px;
+      line-height: 30px;
+      margin: 20px 0px 21px;
+  }
+</style>
+<div class="brands-main-conatiner">
+  <div class="brands-textarea">
+    <div class="b-title">
+      <h3>{{ section.settings.b_title }}</h3>
+    </div>
+    <div class="b-description">{{ section.settings.b_description }}</div>
+  </div>
+  <div class="brands-min-container">
+    {% for block in section.blocks %}
+      <div class="brands-sub-container">
+        <div class="brands-images">
+          <img class="brands-img" src="{{ block.settings.brands_image | image_url }}">
+        </div>
+        <div class="brands-details">{{ block.settings.brands_details }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+"name": "About Brands",
+"settings": [
+  {
+  "type": "text",
+  "id": "b_title",
+  "label": "Title"
+},
+{
+  "type": "richtext",
+  "id": "b_description",
+  "label": "Description"
+}
+],
+"blocks": [
+{
+"name": "Brands",
+"type": "content",
+"settings": [
+
+{
+  "type": "image_picker",
+  "id": "brands_image",
+  "label": "Image"
+},
+{
+  "type": "richtext",
+  "id": "brands_details",
+  "label": "Details"
+}
+
+]
+}
+],
+"presets": [
+{
+"name": "About Brands"
+}
+]
+}
+{% endschema %}

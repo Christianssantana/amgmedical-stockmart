@@ -1,0 +1,148 @@
+<style>
+  .story-heading h3 {
+    margin: 0px 0px 10px;
+    font-size: 35px;
+    line-height: 50px;
+    color: #5d226c;
+    font-weight: 400;
+  }
+
+  .story-description p {
+    margin: 0px 0px 21px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .story-textarea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 800px;
+  }
+
+  a.button-click {
+    text-decoration: none;
+    color: #5d226c;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  button.more-button {
+    padding: 14px 38px;
+    border: 1px solid #5d226c;
+    background-color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 0px 0px 14px;
+  }
+
+  .story-main-sub {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 100px;
+    justify-content: space-between;
+  }
+
+  .btn-conatiner {
+    width: 100%;
+    max-width: 166px;
+    margin: 0px 0px 0px 96px;
+  }
+
+  img.year-img {
+    object-fit: cover;
+    height: 100%;
+    margin-bottom: 50px;
+  }
+
+  .year-image {
+    margin-block: 100px;
+  }
+
+  .story-max-sontainer {
+    overflow: hidden;
+  }
+  @media only screen and (max-width: 768px) {
+    .btn-conatiner {
+      margin-left: auto;
+    }
+    .story-main-sub {
+      flex-direction: column !important;
+    }
+    img.cover-img {
+      width: 100%;
+      height: 564px;
+    }
+  }
+</style>
+<div class="story-max-sontainer">
+  <div class="container">
+    <div class="story-main-sub">
+      <div class="story-textarea">
+        <div class="story-heading">
+          <h3>{{ section.settings.story_heading }}</h3>
+        </div>
+        <div class="story-description">
+          <p>{{ section.settings.story_description }}</p>
+        </div>
+      </div>
+      <div class="btn-conatiner">
+        <button class="more-button">
+          <a class="button-click" href="{{ section.settings.read_more }}">READ MORE</a>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="container year-image">
+    <img
+      srcset="
+        {%- if section.settings.year_image.width >= 375 -%}{{ section.settings.year_image | image_url: width: '375x' }} 375w,{%- endif -%}
+        {%- if section.settings.year_image.width >= 750 -%}{{ section.settings.year_image | image_url: width: '750x' }} 750w,{%- endif -%}
+        {%- if section.settings.year_image.width >= 1296 -%}{{ section.settings.year_image | image_url: width: '1296x' }} 1296w,{%- endif -%}
+        {%- if section.settings.year_image.width >= 1500 -%}{{ section.settings.year_image | image_url: width: '1500x' }} 1500w,{%- endif -%}
+        {%- if section.settings.year_image.width >= 1780 -%}{{ section.settings.year_image | image_url: width: '1780x' }} 1780w,{%- endif -%}
+        {%- if section.settings.year_image.width >= 2000 -%}{{ section.settings.year_image | image_url: width: '2000x' }} 2000w,{%- endif -%}
+        {%- if section.settings.year_image.width >= 2800 -%}{{ section.settings.year_image | image_url: width: '2800x' }} 2800w{%- endif -%}
+      "
+      src="{{ section.settings.year_image | image_url: width: '450x' }}"
+      loading="lazy"
+      class="year-img"
+      alt="{{ section.settings.year_image.alt | escape }}"
+      width="{{ section.settings.year_image.width }}"
+      height="{{ section.settings.year_image.width | divided_by: section.settings.year_image.aspect_ratio }}"
+      style="object-position: {{ section.settings.year_image.presentation.focal_point }}"
+    >
+  </div>
+</div>
+{% schema %}
+{
+  "name": "About Our Story",
+  "settings": [
+    {
+      "type": "text",
+      "id": "story_heading",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "story_description",
+      "label": "Description"
+    },
+    {
+      "type": "url",
+      "id": "read_more",
+      "label": "Button"
+    },
+    {
+      "type": "image_picker",
+      "id": "year_image",
+      "label": "Year Calendar Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Our Story"
+    }
+  ]
+}
+{% endschema %}

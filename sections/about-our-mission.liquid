@@ -1,0 +1,213 @@
+<style>
+  .mission-sub-container.change-dr.set-mrgin .content-image {
+    margin-left: 0 !important;
+  }
+
+  .mission-sub-container.change-dr.set-mrgin {
+    justify-content: space-between;
+  }
+  .mission-sub-container.change-dr.set-mrgin .content-image {
+    margin-bottom: -100px;
+  }
+  .mission-sub-container.change-dr.set-mrgin .sub-textarea {
+    padding-right: 0;
+    padding-left: 50px;
+  }
+  .title-text h3 {
+    margin-top: 0;
+    font-size: 35px;
+    line-height: 50px;
+    color: #5d226c;
+    font-weight: 400;
+  }
+
+  .description-text p {
+    margin: 0px 0px 21px;
+    font-size: 16.8px;
+    color: black;
+  }
+
+  img.content-img {
+    width: 100%;
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  .mission-sub-container {
+    display: flex;
+  }
+
+  .content-image {
+    display: flex;
+    max-width: 400px;
+    margin-left: auto;
+  }
+
+  .sub-textarea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    padding-right: 50px;
+    margin-top: 50px;
+    justify-content: center;
+  }
+
+  .mission-sub-container.change-dr {
+    flex-direction: row-reverse;
+  }
+
+  .mission-vision-container {
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+  }
+
+  .mission-sub-container:nth-child(1) {
+    margin-top: -100px;
+  }
+  @media only screen and (max-width: 768px) {
+    mission-sub-container {
+      flex-direction: column;
+      display: flex;
+    }
+
+    .sub-textarea {
+      max-width: 100%;
+    }
+
+    .content-image {
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .content-image img {
+      max-width: 100%;
+      width: 100%;
+    }
+    .mission-sub-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .mission-sub-container:nth-child(1) {
+      margin-top: 0;
+    }
+    .mission-sub-container:nth-child(1) {
+      margin-top: 0;
+    }
+
+    .mission-sub-container.change-dr.set-mrgin .content-image {
+      margin-bottom: 0;
+    }
+
+    .mission-sub-container.change-dr.set-mrgin {
+      flex-direction: column;
+    }
+
+    .sub-textarea {
+      padding-right: 0;
+    }
+
+    .content-image {
+      display: flex;
+      justify-content: center;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .mission-sub-container.change-dr.set-mrgin .content-image {
+      display: flex;
+      justify-content: center;
+      margin-right: 0;
+    }
+    .mission-sub-container.change-dr.set-mrgin .sub-textarea {
+      padding-left: 0 !important;
+    }
+  }
+</style>
+<div class="mission-vision-container">
+  <div class="container">
+    <div class="mission-min-container">
+      {% for block in section.blocks %}
+        <div class="mission-sub-container {% if block.settings.change_direction %}change-dr{% endif %} {% if block.settings.set-margin %}set-mrgin{% endif %}">
+          <div class="sub-textarea">
+            <div class="title-text">
+              <h3>{{ block.settings.title_text }}</h3>
+            </div>
+            <div class="description-text">
+              {{ block.settings.description_text }}
+            </div>
+          </div>
+          <div class="content-image">
+            <img
+              srcset="
+                {%- if block.settings.content_image.width >= 375 -%}{{ block.settings.content_image | image_url: width: '375x' }} 375w,{%- endif -%}
+                {%- if block.settings.content_image.width >= 750 -%}{{ block.settings.content_image | image_url: width: '750x' }} 750w,{%- endif -%}
+                {%- if block.settings.content_image.width >= 1296 -%}{{ block.settings.content_image | image_url: width: '1296x' }} 1296w,{%- endif -%}
+                {%- if block.settings.content_image.width >= 1500 -%}{{ block.settings.content_image | image_url: width: '1500x' }} 1500w,{%- endif -%}
+                {%- if block.settings.content_image.width >= 1780 -%}{{ block.settings.content_image | image_url: width: '1780x' }} 1780w,{%- endif -%}
+                {%- if block.settings.content_image.width >= 2000 -%}{{ block.settings.content_image | image_url: width: '2000x' }} 2000w,{%- endif -%}
+                {%- if block.settings.content_image.width >= 2800 -%}{{ block.settings.content_image | image_url: width: '2800x' }} 2800w{%- endif -%}
+              "
+              src="{{ block.settings.content_image | image_url: width: '450x' }}"
+              loading="lazy"
+              class="content-img"
+              alt="{{ block.settings.content_image.alt | escape }}"
+              width="{{ block.settings.content_image.width }}"
+              height="{{ block.settings.content_image.width | divided_by: block.settings.content_image.aspect_ratio }}"
+              style="object-position: {{ block.settings.content_image.presentation.focal_point }}"
+            >
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "About Our Mission",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Block",
+      "type": "content",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "change_direction",
+          "label": "Change Image Direction",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "set-margin",
+          "label": "Image Justify",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "title_text",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description_text",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "content_image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Our Mission"
+    }
+  ]
+}
+{% endschema %}

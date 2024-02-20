@@ -1,0 +1,127 @@
+<style>
+  .position-title p {
+    margin: 0px 0px 10.9px;
+    font-size: 35px;
+    line-height: 50px;
+    color: #5d226c;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+
+  a.position-btn {
+    border: 1px solid #5d226c;
+    color: #5d226c;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1rem;
+    padding: 14px 38.9px;
+    border-radius: 30px;
+    text-decoration: none;
+  }
+
+  .position-button {
+    display: flex;
+  }
+
+  .position-textarea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flex-content p {
+    margin: 20px 0px 0;
+    font-size: 16.8px;
+  }
+  .position-min-sub:nth-child(1) {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .position-min-sub:nth-child(2) {
+    width: 100%;
+    max-width: 450px;
+  }
+  .position-sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 750px) {
+    .position-textarea,
+    .position-sub-container {
+      flex-direction: row;
+    }
+
+    .flex-content p {
+      margin: 50px 0px 21px;
+    }
+  }
+
+  .position-min-container {
+    padding-top: 300px;
+    padding-bottom: 200px;
+  }
+
+  .position-main-container {
+    background-color: #f4eaf4;
+  }
+</style>
+<div class="position-main-container">
+  <div class="position-min-container container">
+    <div class="position-textarea">
+      <div class="position-title">
+        {{ section.settings.position_title }}
+      </div>
+      <div class="position-button">
+        <a class="position-btn" href="{{ section.settings.position_button }}">SEE OPEN POSITINS</a>
+      </div>
+    </div>
+    <div class="position-sub-container">
+      {% for block in section.blocks %}
+        <div class="position-min-sub">
+          <div class="flex-content">{{ block.settings.content_text }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "About Positions",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "position_title",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "position_button",
+      "label": "Button"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Content",
+      "type": "content",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content_text",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Positions"
+    }
+  ]
+}
+{% endschema %}

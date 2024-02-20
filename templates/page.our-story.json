@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "story_slider_87f9Ar": {
+      "type": "story-slider",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "amg_madical_KmxVBQ": {
+      "type": "amg-madical",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/banner-bottom-bg.webp",
+        "text_box_image": "shopify:\/\/shop_images\/white-logo_7f88fdde-96a4-44bf-9917-ff710d7f89da.png",
+        "box_content": "<p>We are providing healthcare solutions that allow people to live and feel better by way of brands that make caring for their health easier, safer, and less stressful.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "story_slider_87f9Ar",
+    "main",
+    "amg_madical_KmxVBQ"
+  ]
+}

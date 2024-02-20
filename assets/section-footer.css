@@ -22,7 +22,6 @@
 
 .footer__blocks-wrapper {
   display: grid;
-  padding: 0 30px;
 }
 @media screen and (mix-width: 990px) {
   .footer__blocks-wrapper {

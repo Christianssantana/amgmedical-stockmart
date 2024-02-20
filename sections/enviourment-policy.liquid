@@ -1,0 +1,108 @@
+
+<style>
+  .sd-title h3 {
+  color: rgba(93, 34, 108, 1);
+  font-weight: normal;
+  font-family: "TT Norms";
+  font-style: normal;
+  font-size: 50px;
+  text-align: left;
+  margin: 0;
+  padding: 10px 0px 40px;
+  }
+
+  .sd-description p {
+  margin: 0px 0px 21px;
+  font-size: 24px;
+  color: rgb(93, 34, 108);
+  line-height: 1.5;
+  }
+
+  .sd-details p {
+  margin: 0px 0px 21px;
+  font-size: 24px;
+  color: rgb(93, 34, 108);
+  line-height: 1.5;
+  }
+
+  .sd-min-container {
+  width: 100%;
+  max-width: 706px;
+  }
+
+  .sd-main-container {
+  padding: 0px 150px;
+  padding-top: 80px;
+  padding-bottom: 150px;
+  min-height: 50px;
+  }
+
+  @media screen and (max-width: 850px){
+  .sd-main-container {
+  padding: 0px 50px;
+  padding-top: 80px;
+  padding-bottom: 150px;
+  min-height: 50px;
+  }
+  }
+
+  @media screen and (max-width: 550px){
+  .sd-main-container {
+  padding: 0px 30px;
+  padding-top: 80px;
+  padding-bottom: 125px;
+  min-height: 50px;
+  }
+
+  .sd-details p {
+  font-size: 22px;
+  }
+
+  .sd-description p {
+  font-size: 22px;
+  }
+
+  .sd-title h3 {
+  font-size: 42px;
+  }
+  }
+</style>
+<div class="sd-main-container">
+  <div class="sd-min-container">
+    <div class="sd-title">
+      <h3>{{ section.settings.sd_title }}</h3>
+    </div>
+    <div class="sd-description">
+      <p>{{ section.settings.sd_description }}</p>
+    </div>
+    <div class="sd-details">{{ section.settings.sd_details }}</div>
+  </div>
+</div>
+{% schema %}
+{
+"name": "Sustainable Development",
+"settings": [
+{
+"type": "text",
+"id": "sd_title",
+"label": "Title"
+},
+{
+"type": "textarea",
+"id": "sd_description",
+"label": "Description"
+},
+{
+"type": "richtext",
+"id": "sd_details",
+"label": "More Details"
+}
+
+],
+"presets": [
+{
+"name": "Sustainable Development"
+}
+]
+}
+{% endschema %}

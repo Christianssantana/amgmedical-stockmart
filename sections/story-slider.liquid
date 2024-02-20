@@ -1,0 +1,130 @@
+<style>
+    h3.heading-slide {
+        font-size: 30px;
+        line-height: 30px;
+        color: #d5bed7;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .container-years-title {
+        overflow: visible;
+        position: relative;
+        text-align: center;
+        padding-bottom: 70px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #d5bed7;
+    }
+
+    .container-years-title:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-bottom: -8px;
+        width: 15px;
+        height: 15px;
+        content: " ";
+        background-color: #fff;
+        content: " ";
+        border: 2px solid #d5bed7;
+    }
+
+    .swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active .container-years-title:after {
+        background: #5d226c;
+        border: 2px solid #5d226c;
+        padding: 5px;
+        background-clip: content-box;
+        margin-bottom: -15px;
+    }
+
+    .swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active h3.heading-slide {
+        color: #5d226c;
+    }
+</style>
+<div class="yearly-slider-cs">
+    <div class="yearly-slider-container">
+        <div thumbsSlider="" class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                <div class="swiper-slide">
+                    <div class="container-years-title">
+                        <h3 class="heading-slide">{{ block.settings.title }}</h3>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-button-next custom-btn"></div>
+            <div class="swiper-button-prev custom-btn"></div>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                <div class="swiper-slide">
+                    <div class="slide-description">
+                        {{ block.settings.description }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+        centeredSlides: true,
+        slidesPerView: 3,
+        observer: true,
+        observeParents: true,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        watchSlidesProgress: true,
+        thumbs: {
+            swiper: swiper2,
+        },
+    });
+</script>
+{% schema %}
+{
+"name": "Yearly Slider",
+"settings": [
+],
+"blocks": [
+{
+"name": "Slide",
+"type": "slide",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Slide Title Year",
+"default": "2021"
+},
+{
+"type": "richtext",
+"id": "description",
+"label": "Description",
+"default": "<p>In 2021 A.M.G. repurchased the global rights to the Dex4 brand from Perrigo.</p>"
+}
+
+]
+}
+],
+"presets": [
+{
+"name": "Yearly Slider",
+"settings": {
+}
+}
+]
+}
+{% endschema %}
